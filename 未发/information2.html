@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/information.css"/>
+    <style type="text/css">
+        .box ul li input.companyName,.box ul li input.position,.box ul li input.workExp{
+            width: 350px;
+            height: 40px;
+            line-height: 40px;
+            padding-left: 10px;
+            border-radius: 5px;
+        }
+        .box ul li .start-box,.box ul li .end-box{
+            width: 160px;
+            height: 40px;
+            display: inline-block;
+            margin-right: 35px;
+            position: relative;
+            *float:left;
+            *margin-right: 40px;
+        }
+        .box ul li .start-list,.box ul li .end-list{
+            display: none;
+            width: 158px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            z-index: 3;
+        }
+        .box ul li .start-list .start-list-left,.box ul li .end-list .end-list-left{
+            float: left;
+            width: 55px;
+            height: 125px;
+            overflow: auto;
+        }
+        .box ul li .start-list .start-list-left a,.box ul li .end-list .end-list-left a{
+            display: block;
+            text-align: center;
+            line-height: 25px;
+        }
+        .box ul li .start-list .start-list-right,.box ul li .end-list .end-list-right{
+            position: absolute;
+            line-height: 30px;
+            margin-left: 55px;
+        }
+        .box ul li .start-list .start-list-right a,.box ul li .end-list .end-list-right a{
+            width: 33px;
+            text-align: center;
+            float: left;
+        }
+        .box ul li .start-list a:hover,.box ul li .end-list a:hover{
+            color: #e60012;
+        }
+        .box ul li input.startTime,.box ul li input.endTime{
+            width: 130px;
+            height: 40px;
+            line-height: 40px;
+            padding: 0 20px 0 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .box ul li .start-con i,.box ul li .end-con i{
+            cursor: pointer;
+            width: 0;
+            height: 0;
+            border-width: 8px;
+            border-color: #d3d3d3 transparent transparent transparent;
+            border-style: solid;
+            position: absolute;
+            right: 20px;
+            top: 16px;
+        }
+        .box ul li .end-box{
+            margin-right: 0;
+        }
+
+        .box .work-exp-box,.box .work-exp-con{
+            position: relative;
+        }
+        .box .work-exp-box .work-exp-con span{
+            display: inline-block;
+            width: 19px;
+            height: 19px;
+            background: url("../images/info-more.png") no-repeat;
+            position: absolute;
+            right: 20px;
+            top: 10px;
+        }
+
+        .box ul li.show{
+            display: none;
+        }
+        .box ul li.line{
+            height: 0;
+            width: 100%;
+            border-bottom: 1px dashed #ccc;
+        }
+
+        .box ul li.last{
+            margin-top: 40px;
+        }
+        .box ul li a.prev{
+            float: left;
+            color: #000;
+            padding: 5px 10px;
+        }
+        .box ul li a.next{
+            float: right;
+            color: #e60012;
+            padding: 5px 10px;
+        }
+        .box ul li a.next:hover,.box ul li a.prev:hover{
+            color: #fff;
+            background-color: #e60012;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <h3>工作经历</h3>
+    <form action="">
+        <ul>
+            <li><input class="companyName" type="text" name="company" title="公司名称" placeholder="公司名称"/></li>
+            <li class="clearfix">
+                <div class="start-box">
+                    <div class="start-con">
+                        <input class="startTime" id="startTime" type="text" title="起始时间" placeholder="起始时间"/>
+                        <i></i>
+                    </div>
+                    <div class="start-list time-list">
+                        <div class="start-list-left time-list-left">
+                            <a href="javascript:;" data-value="2016">2016</a>
+                            <a href="javascript:;" data-value="2015">2015</a>
+                            <a href="javascript:;" data-value="2014">2014</a>
+                            <a href="javascript:;" data-value="2013">2013</a>
+                            <a href="javascript:;" data-value="2012">2012</a>
+                            <a href="javascript:;" data-value="2011">2011</a>
+                            <a href="javascript:;" data-value="2010">2010</a>
+                            <a href="javascript:;" data-value="2009">2009</a>
+                            <a href="javascript:;" data-value="2008">2008</a>
+                            <a href="javascript:;" data-value="2007">2007</a>
+                            <a href="javascript:;" data-value="2006">2006</a>
+                            <a href="javascript:;" data-value="2005">2005</a>
+                            <a href="javascript:;" data-value="2004">2004</a>
+                            <a href="javascript:;" data-value="2003">2003</a>
+                            <a href="javascript:;" data-value="2002">2002</a>
+                            <a href="javascript:;" data-value="2001">2001</a>
+                            <a href="javascript:;" data-value="2000">2000</a>
+                        </div>
+                        <div class="start-list-right time-list-right">
+                            <a href="javascript:;" data-value="01">1月</a>
+                            <a href="javascript:;" data-value="02">2月</a>
+                            <a href="javascript:;" data-value="03">3月</a>
+                            <a href="javascript:;" data-value="04">4月</a>
+                            <a href="javascript:;" data-value="05">5月</a>
+                            <a href="javascript:;" data-value="06">6月</a>
+                            <a href="javascript:;" data-value="07">7月</a>
+                            <a href="javascript:;" data-value="08">8月</a>
+                            <a href="javascript:;" data-value="09">9月</a>
+                            <a href="javascript:;" data-value="10">10月</a>
+                            <a href="javascript:;" data-value="11">11月</a>
+                            <a href="javascript:;" data-value="12">12月</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="end-box">
+                    <div class="end-con">
+                        <input class="endTime" id="endTime" type="text" title="结束时间" placeholder="结束时间"/>
+                        <i></i>
+                    </div>
+                    <div class="end-list time-list">
+                        <div class="end-list-left time-list-left">
+                            <a href="javascript:;" data-value="2016">2016</a>
+                            <a href="javascript:;" data-value="2015">2015</a>
+                            <a href="javascript:;" data-value="2014">2014</a>
+                            <a href="javascript:;" data-value="2013">2013</a>
+                            <a href="javascript:;" data-value="2012">2012</a>
+                            <a href="javascript:;" data-value="2011">2011</a>
+                            <a href="javascript:;" data-value="2010">2010</a>
+                            <a href="javascript:;" data-value="2009">2009</a>
+                            <a href="javascript:;" data-value="2008">2008</a>
+                            <a href="javascript:;" data-value="2007">2007</a>
+                            <a href="javascript:;" data-value="2006">2006</a>
+                            <a href="javascript:;" data-value="2005">2005</a>
+                            <a href="javascript:;" data-value="2004">2004</a>
+                            <a href="javascript:;" data-value="2003">2003</a>
+                            <a href="javascript:;" data-value="2002">2002</a>
+                            <a href="javascript:;" data-value="2001">2001</a>
+                            <a href="javascript:;" data-value="2000">2000</a>
+                        </div>
+                        <div class="end-list-right time-list-right">
+                            <a href="javascript:;" data-value="01">1月</a>
+                            <a href="javascript:;" data-value="02">2月</a>
+                            <a href="javascript:;" data-value="03">3月</a>
+                            <a href="javascript:;" data-value="04">4月</a>
+                            <a href="javascript:;" data-value="05">5月</a>
+                            <a href="javascript:;" data-value="06">6月</a>
+                            <a href="javascript:;" data-value="07">7月</a>
+                            <a href="javascript:;" data-value="08">8月</a>
+                            <a href="javascript:;" data-value="09">9月</a>
+                            <a href="javascript:;" data-value="10">10月</a>
+                            <a href="javascript:;" data-value="11">11月</a>
+                            <a href="javascript:;" data-value="12">12月</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li><input class="position" type="text" name="position" title="您的职位" placeholder="您的职位"/></li>
+            <li class="show line"></li>
+            <li class="show"><input class="companyName" type="text" name="company" title="公司名称" placeholder="公司名称"/></li>
+            <li class="show">
+                <div class="start-box">
+                    <div class="start-con">
+                        <input class="startTime" type="text" title="起始时间" placeholder="起始时间"/>
+                        <i></i>
+                    </div>
+                    <div class="start-list time-list">
+                        <div class="start-list-left time-list-left">
+                            <a href="javascript:;" data-value="2016">2016</a>
+                            <a href="javascript:;" data-value="2015">2015</a>
+                            <a href="javascript:;" data-value="2014">2014</a>
+                            <a href="javascript:;" data-value="2013">2013</a>
+                            <a href="javascript:;" data-value="2012">2012</a>
+                            <a href="javascript:;" data-value="2011">2011</a>
+                            <a href="javascript:;" data-value="2010">2010</a>
+                            <a href="javascript:;" data-value="2009">2009</a>
+                            <a href="javascript:;" data-value="2008">2008</a>
+                            <a href="javascript:;" data-value="2007">2007</a>
+                            <a href="javascript:;" data-value="2006">2006</a>
+                            <a href="javascript:;" data-value="2005">2005</a>
+                            <a href="javascript:;" data-value="2004">2004</a>
+                            <a href="javascript:;" data-value="2003">2003</a>
+                            <a href="javascript:;" data-value="2002">2002</a>
+                            <a href="javascript:;" data-value="2001">2001</a>
+                            <a href="javascript:;" data-value="2000">2000</a>
+                        </div>
+                        <div class="start-list-right time-list-right">
+                            <a href="javascript:;" data-value="01">1月</a>
+                            <a href="javascript:;" data-value="02">2月</a>
+                            <a href="javascript:;" data-value="03">3月</a>
+                            <a href="javascript:;" data-value="04">4月</a>
+                            <a href="javascript:;" data-value="05">5月</a>
+                            <a href="javascript:;" data-value="06">6月</a>
+                            <a href="javascript:;" data-value="07">7月</a>
+                            <a href="javascript:;" data-value="08">8月</a>
+                            <a href="javascript:;" data-value="09">9月</a>
+                            <a href="javascript:;" data-value="10">10月</a>
+                            <a href="javascript:;" data-value="11">11月</a>
+                            <a href="javascript:;" data-value="12">12月</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="end-box">
+                    <div class="end-con">
+                        <input class="endTime" type="text" title="结束时间" placeholder="结束时间"/>
+                        <i></i>
+                    </div>
+                    <div class="end-list time-list">
+                        <div class="end-list-left time-list-left">
+                            <a href="javascript:;" data-value="2016">2016</a>
+                            <a href="javascript:;" data-value="2015">2015</a>
+                            <a href="javascript:;" data-value="2014">2014</a>
+                            <a href="javascript:;" data-value="2013">2013</a>
+                            <a href="javascript:;" data-value="2012">2012</a>
+                            <a href="javascript:;" data-value="2011">2011</a>
+                            <a href="javascript:;" data-value="2010">2010</a>
+                            <a href="javascript:;" data-value="2009">2009</a>
+                            <a href="javascript:;" data-value="2008">2008</a>
+                            <a href="javascript:;" data-value="2007">2007</a>
+                            <a href="javascript:;" data-value="2006">2006</a>
+                            <a href="javascript:;" data-value="2005">2005</a>
+                            <a href="javascript:;" data-value="2004">2004</a>
+                            <a href="javascript:;" data-value="2003">2003</a>
+                            <a href="javascript:;" data-value="2002">2002</a>
+                            <a href="javascript:;" data-value="2001">2001</a>
+                            <a href="javascript:;" data-value="2000">2000</a>
+                        </div>
+                        <div class="end-list-right time-list-right">
+                            <a href="javascript:;" data-value="01">1月</a>
+                            <a href="javascript:;" data-value="02">2月</a>
+                            <a href="javascript:;" data-value="03">3月</a>
+                            <a href="javascript:;" data-value="04">4月</a>
+                            <a href="javascript:;" data-value="05">5月</a>
+                            <a href="javascript:;" data-value="06">6月</a>
+                            <a href="javascript:;" data-value="07">7月</a>
+                            <a href="javascript:;" data-value="08">8月</a>
+                            <a href="javascript:;" data-value="09">9月</a>
+                            <a href="javascript:;" data-value="10">10月</a>
+                            <a href="javascript:;" data-value="11">11月</a>
+                            <a href="javascript:;" data-value="12">12月</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="show"><input class="position" type="text" name="position" title="您的职位" placeholder="您的职位"/></li>
+            <li>
+                <div class="work-exp-box">
+                    <div class="work-exp-con">
+                        <input class="workExp" id="workExp" type="text" title="添加更多工作经历" placeholder="添加更多工作经历"/>
+                        <span></span>
+                    </div>
+                   <!-- <div class="work-exp-list">
+                        <p><span>公司</span><input type="text" class="pastCompany" name="pastCompany"/></p>
+                        <p><span>职位</span><input type="text" class="pastPost" name="pastPost"/></p>
+                        <p>
+                            <span>在职时间</span>
+                            <input type="month"/><input type="month"/>
+                        </p>
+
+                    </div>-->
+                </div>
+            </li>
+            <li class="last"><a class="prev" href="information1.html">上一步</a><a class="next" href="#">下一步继续完善职业信息</a></li>
+        </ul>
+    </form>
+</div>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/jquery.mkinfinite.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function(){
+     $('body').mkinfinite({
+     maxZoom:       1.4,
+     animationTime: 4000,
+     imagesRatio:   (960 / 720),
+     isFixedBG:     true,
+     zoomIn:        true,
+     imagesList:    new Array('images/register-bg.jpg')
+     });
+     });
+
+    $(function(){
+        function placeholderSupport() {    // 判断浏览器是否支持 placeholder
+            return 'placeholder' in document.createElement('input');
+        }
+
+        function checkEmpty(fill){
+            if($(fill).val()==""){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        if(!placeholderSupport()){
+            $(document).on('focus', '[placeholder]',function() {
+                var input = $(this);
+                if (input.val() == input.attr('placeholder')) {
+                    input.val('');
+                }
+            });
+            $(document).on('blur', '[placeholder]',function() {
+                var input = $(this);
+                if (input.val() == '' || input.val() == input.attr('placeholder')) {
+                    input.val(input.attr('placeholder'));
+                }
+            });
+            $('[placeholder]').blur();
+
+            $("a.next").click(function(){
+                if((checkEmpty(".companyName")||$(".companyName").val()!=="公司名称")&&(checkEmpty(".startTime")||$(".startTime").val()!=="起始时间")&&(checkEmpty(".endTime")||$(".endTime").val()!=="结束时间")&&(checkEmpty(".position")||$(".position").val()!=="您的职位")){
+                    $(this).attr("href","information3.html");
+                }else{
+                    alert("请将您的工作经历填写完整！")
+                }
+            })
+        }else{
+            $("a.next").click(function(){
+                if((!checkEmpty(".companyName"))&&(!checkEmpty(".startTime"))&&(!checkEmpty(".endTime"))&&(!checkEmpty(".position"))){
+                    $(this).attr("href","information3.html");
+                }else{
+                    alert("请将您的工作经历填写完整！")
+                }
+            })
+        }
+    });
+
+    $(function(){
+        $(".work-exp-box").click(function(){
+            $(".box").css({
+                marginTop:-320
+            }).animate({
+                height:"520"
+            },500);
+            $(".show").css({
+                display:"block"
+            });
+        })
+    })
+
+    $(function(){
+        selectBox(".start-con");
+        selectBox(".end-con");
+
+        function selectBox(box){
+            $(box).click(function(){
+                $(this).next().toggle();
+            })
+        }
+    })
+
+    $(function(){
+        selectItem(".start-box");
+        selectItem(".end-box");
+
+        function selectItem(box){
+            var val1,val2;
+            $(box).find(".time-list-left a").click(function(){
+                val1 = $(this).attr("data-value");
+                $(box).find("input").val(val1)
+            });
+            $(box).find(".time-list-right a").click(function(){
+                val2 = $(this).attr("data-value");
+                $(box).find("input").val(val1+"/"+val2);
+                $(box).find(".time-list").css("display","none");
+            })
+        }
+    })
+
+    $(function(){
+        $(".companyName").blur(function(){
+            if($(this).val()==""){
+                $(this).parent().find("span").html("");
+                $(this).parent().append("<span style='color: #f00;'>请填写您以前所在的公司名称</span>")
+            }else{
+                $(this).parent().find("span").html("");
+            }
+        });
+        $(".position").blur(function(){
+            var name = $(this).val();
+            if(name==""){
+                $(this).parent().find("span").html("");
+                $(this).parent().append("<span style='color: #f00;'>请输入您的职位</span>")
+            }else{
+                $(this).parent().find("span").html("");
+            }
+        })
+    })
+</script>
+</body>
+</html>

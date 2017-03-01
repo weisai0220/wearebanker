@@ -1,0 +1,551 @@
+@charset "utf-8";
+.nav{
+    margin-top: 80px;
+    height: 65px;
+    line-height: 65px;
+    width: 100%;
+    min-width: 1230px;
+    border-bottom: 2px solid #efefef;
+}
+.nav .container{
+    overflow: hidden;
+}
+.nav ul{
+    margin-left: -20px;
+}
+.nav ul li{
+    float: left;
+    color: #efefef;
+}
+.nav ul li a{
+    color: #c0c0c0;
+    font-size: 18px;
+    padding: 0 20px;
+}
+.nav ul li a:hover{
+    color: #3e3e3e;
+}
+.nav ul li.cur a{
+    color: #3e3e3e;
+}
+
+.part1 .container{
+    margin-top: -1px;
+    border: 1px solid #ebebeb;
+}
+.part1 .part1-item{
+    margin: 0 35px;
+    padding: 20px 0;
+    border-bottom: 1px dashed #ebebeb;
+}
+.part1 .part1-item.last{
+    border-bottom: none;
+}
+.part1 .part1-item .common-box{
+    float: left;
+    position: relative;
+    width: 120px;
+    height: 30px;
+    border: 1px solid #ebebeb;
+    margin-right: 30px;
+}
+.part1 .part1-item .common-con{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 30px;
+    background-color: #ebebeb;
+}
+.part1 .part1-item .common-con input{
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 5px;
+}
+.part1 .part1-item .common-con i{
+    border-width: 8px 5px;
+    border-style: solid;
+    border-color: #929292 transparent transparent;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.part1 .part1-item .common-list{
+    display: none;
+    width: 100%;
+    height: 120px;
+    overflow: auto;
+    position: absolute;
+    top: 32px;
+    left: -1px;
+    border: 1px solid #ebebeb;
+    background-color: #fff;
+}
+.part1 .part1-item .common-list a{
+    display: block;
+    padding-left: 10px;
+    height: 24px;
+    line-height: 24px;
+}
+.part1 .part1-item .common-list a:hover{
+    background-color: #ebebeb;
+}
+.part1 .part1-item .money span,.part1 .part1-item .deadline span{
+    color: #c6c6c6;
+    font-size: 16px;
+    margin-right: 10px;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+}
+.part1 .part1-item span{
+    float: left;
+    color: #c6c6c6;
+    font-size: 16px;
+    margin-right: 10px;
+    line-height: 28px;
+}
+.part1 .part1-item .part1-item-list{
+    float: left;
+    width: 1030px;
+}
+.part1 .part1-item .part1-item-list a{
+    display: inline-block;
+    font-size: 16px;
+    padding: 3px 8px;
+    margin: 0 15px 10px 0;
+}
+.part1 .part1-item .part1-item-list a:hover,.part1 .part1-item .part1-item-list a.cur{
+    color: #fff;
+    background-color: #ff4651;
+}
+
+
+.part2 .common-box{
+    float: left;
+    position: relative;
+    width: 145px;
+    height: 27px;
+    border: 1px solid #ebebeb;
+    margin-right: 20px;
+}
+.part2 .common-con{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 145px;
+    height: 27px;
+}
+.part2 .common-con input{
+    width: 110px;
+    height: 27px;
+    line-height: 27px;
+    padding: 0 5px;
+}
+.part2 .common-con i{
+    border-width: 8px 5px;
+    border-style: solid;
+    border-color: #929292 transparent transparent;
+    position: absolute;
+    top: 10px;
+    right: 7px;
+}
+.part2 .common-list{
+    display: none;
+    width: 100%;
+    height: 120px;
+    overflow: auto;
+    position: absolute;
+    top: 32px;
+    left: -1px;
+    border: 1px solid #ebebeb;
+    background-color: #fff;
+    z-index: 5;
+}
+.part2 .mortgage-list{
+    height: 168px;
+}
+.part2 .refund-list{
+    height: 96px;
+}
+.part2 .common-list a{
+    display: block;
+    padding-left: 10px;
+    height: 24px;
+    line-height: 24px;
+}
+.part2 .common-list a:hover{
+    background-color: #ebebeb;
+}
+
+.part2 .part2-left{
+    width: 875px;
+    float: left;
+    margin-bottom: 150px;
+}
+.part2 .part2-left-top{
+    padding: 20px 0 15px;
+    background-color: #fff;
+    border-bottom: 1px solid #ebebeb;
+}
+.part2 .part2-left-top .sort-box{
+    float: right;
+}
+.part2 .part2-left-top .sort-box a{
+    float: left;
+    color: #3e3e3e;
+    display: block;
+    width: 85px;
+    height: 27px;
+    border: 1px solid #ebebeb;
+    text-align: center;
+    line-height: 27px;
+    margin-left: 20px;
+}
+.part2 .part2-left-top .sort-box a:hover,.part2 .part2-left-top .sort-box a.cur{
+    background-color: #ebebeb;
+}
+.am-sticky {
+    position: fixed!important;
+    z-index: 10;
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+/*没有匹配结果开始*/
+.part2 .part2-no-result{
+    width: 750px;
+    margin: 0 auto;
+    padding: 60px 0 70px;
+}
+.part2 .part2-no-result h3{
+    color: #4a4a4a;
+    font-size: 18px;
+}
+.part2 .part2-no-result h3 i{
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    margin-right: 15px;
+    vertical-align: middle;
+    background: url("../images/creditList-sad.png") no-repeat;
+}
+.part2 .part2-no-result span{
+    color: #fff;
+    display: inline-block;
+    background-color: #ff7800;
+    font-size: 18px;
+    padding: 0 5px;
+    margin: 10px 0 10px 51px;
+}
+.part2 .part2-no-result ul li{
+    color: #ff7800;
+    height: 24px;
+    line-height: 24px;
+    margin-left: 51px;
+}
+.part2 .part2-no-result ul li i{
+    display: inline-block;
+    border-width: 6px 6px;
+    border-color: transparent transparent transparent #ff7800;
+    border-style: solid;
+}
+/*没有匹配结果结束*/
+
+.part2 .part2-list .part2-item{
+    position: relative;
+    padding: 20px 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+.part2 .part2-list .part2-item>a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.part2 .part2-list .part2-item:hover{
+    background-color: #f6f6f6;
+}
+.part2 .part2-item .bank-icon{
+    float: left;
+    width: 47px;
+    height: 47px;
+    margin: 0 10px 0 5px;
+}
+.part2 .part2-item .bank-icon img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.part2 .part2-item .bank-info{
+    width: 810px;
+    float: right;
+}
+.part2 .part2-item .bank-info h4{
+    height: 47px;
+    line-height: 47px;
+}
+.part2 .part2-item .bank-info h4 a,.part2 .part2-item .bank-info h4 span{
+    color: #323232;
+    font-size: 16px;
+}
+.part2 .part2-item .bank-info h4 a:hover span,.part2 .part2-item .bank-info h4 a:hover,.part2 .part2-item .bank-info h4 span:hover{
+    color: #ff4651;
+    text-decoration: underline;
+}
+.part2 .part2-item .bank-info h4 i{
+    color: #f08a24;
+    font-size: 12px;
+    padding: 0 5px;
+    border: 1px solid #f08a24;
+    border-radius: 2px;
+}
+.part2 .part2-item .bank-info-con{
+
+}
+.part2 .part2-item .bank-info-con .bank-info-item{
+    float: left;
+}
+.part2 .part2-item .bank-info-con .bank-info-item1{
+    width: 165px;
+}
+.part2 .part2-item .bank-info-con .bank-info-item2{
+    width: 160px;
+    padding: 0 30px 0 55px;
+    border-right: 1px dashed #cecece;
+    border-left: 1px dashed #cecece;
+}
+.part2 .part2-item .bank-info-con .bank-info-item3{
+    width: 175px;
+    padding: 0 55px;
+}
+.part2 .part2-item .bank-info-con .bank-info-item4{
+    width: 110px;
+    float: right;
+}
+.part2 .part2-item .bank-info-con .bank-info-item li{
+    color: #777;
+    margin-bottom: 12px;
+}
+.part2 .part2-item .bank-info-con .bank-info-item1 li i{
+    width: 16px;
+    height: 12px;
+    display: inline-block;
+    vertical-align: middle;
+    background:url("../images/loanList-part2-icon.png") no-repeat;
+}
+.part2 .part2-item .bank-info-con .bank-info-item1 li.icon1 i{
+    background-position: 0 0;
+}
+.part2 .part2-item .bank-info-con .bank-info-item1 li.icon2 i{
+    background-position: -16px 0;
+}
+.part2 .part2-item .bank-info-con .bank-info-item1 li.icon3 i{
+    background-position: -32px 0;
+}
+.part2 .part2-item .bank-info-con .bank-info-item3 .w60{
+    float: left;
+    width: 60px;
+}
+.part2 .part2-item .bank-info-con .bank-info-item3 .red{
+    color: #fa0000;
+    font-size: 16px;
+    font-weight: bold;
+}
+.part2 .part2-item .bank-info-con .bank-info-item3 .org{
+    color: #f08a24;
+    font-size: 16px;
+    font-weight: bold;
+}
+.part2 .part2-item .bank-info-con .bank-info-item4 a{
+    color: #fff;
+    font-size: 18px;
+    background-color: #ff4651;
+    border-radius: 2px;
+    display: block;
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.part2 .paging-box{
+    width: 700px;
+    margin: 45px auto;
+}
+.part2 .paging-list{
+    float: left;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    *clear:both;
+}
+.part2 .paging-list a{
+    display: inline-block;
+    padding: 10px 15px;
+    margin-right: 10px;
+    background-color: #fff;
+    color: #8e8e8e;
+    border: 1px solid #ececec;
+}
+.part2 .paging-list ul{
+    display:inline;
+    *position:relative;
+    *top: -10px;
+    /* display: inline-block;*/
+}
+.part2 .paging-list ul li{
+    display: inline-block;
+    cursor: pointer;
+    background-color: #f2f2f2;
+    color: #8e8e8e;
+    *width:40px;
+    *height:40px;
+    *line-height:40px;
+    *display:inline;
+    margin-right: 10px;
+}
+.part2 .paging-list ul li a{
+    margin-right: 0;
+}
+.part2 .paging-list a:hover,.part2 .paging-list ul li:hover a,.part2 .paging-list ul li.cur a,.part2 a.cur{
+    background-color: #ff6269;
+    color: #fff;
+    border-color: #ff6269;
+}
+.part2 .paging-box p{
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    margin-right: 10px;
+}
+.part2 .paging-box p input{
+    width: 50px;
+    height: 38px;
+    text-align: center;
+    border: 1px solid #ececec;
+    margin: 0 5px;
+    vertical-align: middle;
+}
+.part2 .paging-box p button{
+    background-color: #fff;
+    border: 1px solid #ececec;
+    color: #8e8e8e;
+    padding: 10px 15px;
+    padding: 0 15px\0;
+}
+
+.part2 .part2-right{
+    float: right;
+    width: 310px;
+}
+.part2 .part2-right .part2-right-top{
+    padding: 25px 0 10px;
+    border-bottom: 2px solid #aaa;
+}
+.part2 .part2-right .part2-right-top h2{
+    color: #4a4a4a;
+    font-size: 18px;
+    font-weight: normal;
+    float: left;
+    border-left: 8px solid #fa0000;
+    padding-left: 8px;
+}
+.part2 .part2-right .part2-right-top a{
+    float: right;
+}
+.part2 .part2-right .part2-right-top a:hover{
+    color: #ff4651;
+    text-decoration: underline;
+}
+.part2 .part2-right ul li{
+    position: relative;
+    padding: 15px 0;
+    border-bottom: 1px solid #cecece;
+}
+.part2 .part2-right ul li:hover{
+    background-color: #f6f6f6;
+}
+.part2 .part2-right ul li>a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.part2 .part2-right ul li .img{
+    width: 72px;
+    height: 72px;
+    float: left;
+    margin-right: 15px;
+    border-radius: 5px;
+}
+.part2 .part2-right ul li .img img{
+    width: 72px;
+    height: 72px;
+}
+.part2 .part2-right ul li .info{
+    width: 210px;
+    float: left;
+}
+.part2 .part2-right ul li .info h4 a{
+    color: #4a4a4a;
+    font-size: 16px;
+}
+.part2 .part2-right ul li .info h4 a:hover{
+    color: #ff4651;
+    text-decoration: underline;
+}
+.part2 .part2-right ul li .info p{
+    color: #6c6c6c;
+    margin-top: 10px;
+}
+.part2 .part2-right ul li span{
+    position: absolute;
+    top: 15px;
+    right: 0;
+    color: #6c6c6c;
+    font-size: 12px;
+    border: 1px solid #cecece;
+    border-radius: 5px;
+    padding: 0 3px;
+}
+.part2 .part2-right .img-box1{
+    width: 310px;
+    height: 143px;
+    margin-top: 25px;
+}
+.part2 .part2-right .img-box1 img{
+    width: 310px;
+    height: 143px;
+}
+
+.part2 .part2-right ol{
+    margin-top: 15px;
+}
+.part2 .part2-right ol li{
+    margin-bottom: 5px;
+}
+.part2 .part2-right ol li a{
+    color: #4a4a4a;
+    font-size: 12px;
+}
+.part2 .part2-right ol li a:hover{
+    color: #ff4651;
+    text-decoration: underline;
+}
+
+.part2 .part2-right .img-box2{
+    padding-top: 20px;
+    text-align: center;
+}
+.part2 .part2-right .img-box2 p{
+    color: #6c6c6c;
+    font-size: 18px;
+}

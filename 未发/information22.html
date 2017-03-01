@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/information.css"/>
+
+    <style type="text/css">
+        .box{
+            height: 260px;
+        }
+        .box ul li input.email{
+            width: 340px;
+            height: 40px;
+            line-height: 40px;
+            padding: 0 10px;
+            border-radius: 5px;
+        }
+        .box ul li input.img{
+            width: 260px;
+            height: 40px;
+            line-height: 40px;
+            padding: 0 10px;
+            border-radius: 5px;
+            *float:left;
+        }
+        .box ul li a.upload{
+            display: inline-block;
+            width: 65px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            margin-left: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #e60012;
+            border-radius: 5px;
+            *float:left;
+            *margin-left:15px;
+        }
+        .box ul li.state{
+            margin-top: 10px;
+        }
+        .box ul li p{
+            padding-left: 10px;
+            color: #e60012;
+            line-height: 2em;
+        }
+
+        .box ul li.next{
+            margin-top: 40px;
+            text-align: center;
+        }
+        .box ul li.next a{
+            color: #e60012;
+            padding: 5px 10px;
+        }
+        .box ul li.next a:hover{
+            color: #fff;
+            background-color: #e60012;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <h3>企业信息</h3>
+    <form action="">
+        <ul>
+            <li><input class="email" type="text" name="email" title="请输入您公司的邮箱地址" placeholder="请输入您公司的邮箱地址"/></li>
+            <!--上传营业执照开始-->
+            <li>
+                <input class="img" type="text" name="img" title="请上传您公司的营业执照" placeholder="请上传您公司的营业执照"/>
+                <a class="upload" href="javascript:;">上传</a>
+            </li>
+            <!--上传营业执照结束-->
+            <li class="state">
+                <p>支持GIF、JPG、PNG格式 大小不超过2M</p>
+                <p>请上传加盖公司印章(红章)的营业执照扫描件</p>
+            </li>
+            <li class="next"><a href="#">提交</a></li>
+        </ul>
+    </form>
+</div>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/jquery.mkinfinite.js"></script>
+<script type="text/javascript">
+    /*使背景图片运动*/
+     $(document).ready(function(){
+     $('body').mkinfinite({
+     maxZoom:       1.4,
+     animationTime: 4000,
+     imagesRatio:   (960 / 720),
+     isFixedBG:     true,
+     zoomIn:        true,
+     imagesList:    new Array('images/register-bg.jpg')
+     });
+     });
+
+    $(function(){
+        var oInput = $('.linkman-box label input');
+        oInput.click(function(){
+            $(this).parent().addClass('cur').siblings().removeClass('cur');
+            $(this).attr('checked','checked').parent().siblings().find('input').removeAttr('checked');
+        })
+    });
+
+    $(function(){
+        function placeholderSupport() {    // 判断浏览器是否支持 placeholder
+            return 'placeholder' in document.createElement('input');
+        }
+
+        function checkEmpty(fill){
+            if($(fill).val()==""){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        if(!placeholderSupport()){
+            $(document).on('focus', '[placeholder]',function() {
+                var input = $(this);
+                if (input.val() == input.attr('placeholder')) {
+                    input.val('');
+                }
+            });
+            $(document).on('blur', '[placeholder]',function() {
+                var input = $(this);
+                if (input.val() == '' || input.val() == input.attr('placeholder')) {
+                    input.val(input.attr('placeholder'));
+                }
+            });
+            $('[placeholder]').blur();
+
+            /*IE浏览器对信息的完整性进行检查*/
+            $(".next a").click(function(){
+                if((checkEmpty(".email")||$(".email").val()!=="请输入您公司的邮箱地址")){
+                    //$(this).attr("href","information22.html");
+                }else{
+                    alert("请将企业信息填写完整！")
+                }
+            })
+
+        }else{
+            $(".next a").click(function(){
+                if((!checkEmpty(".email"))&&(!checkEmpty(".img"))){
+                    //$(this).attr("href","information22.html");
+                }else{
+                    alert("请将企业信息填写完整！")
+                }
+            })
+        }
+    });
+
+    $(function(){
+        $('.email').blur(function(){
+            var filter = /(^[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+\.[a-zA-Z0-9_-]+$)|(^$)/i;
+            if($(this).val()==""){
+                $(this).parent().find("span").html("");
+                $(this).parent().append("<span style='color: #f00;'>请填写您的邮箱地址</span>");
+            }else if(!filter.test($(this).val())){
+                $(this).parent().find("span").html("");
+                $(this).parent().append("<span style='color: #f00;'>请检查您的邮箱地址格式是否正确</span>")
+            }else{
+                $(this).parent().find("span").html("");
+            }
+        });
+
+    })
+</script>
+</body>
+</html>

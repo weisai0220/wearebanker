@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>微合伙文化传媒有限公司_微合伙科技有限公司_金融社交圈_金融趴官网_微合伙</title>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/findPass.css"/>
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <span>
+            <a href="../index.html">
+                <img src="../images/logo.png" alt=""/>
+            </a>
+        </span>
+        <h3>找回密码</h3>
+    </div>
+</div>
+<div class="part1">
+    <div class="container">
+        <div class="part1-top clearfix">
+            <dl>
+                <dt>输入手机号</dt>
+                <dd><i></i></dd>
+            </dl>
+            <dl class="cur">
+                <dt>验证手机号</dt>
+                <dd><i></i></dd>
+            </dl>
+            <dl>
+                <dt>重置密码</dt>
+                <dd><i></i></dd>
+            </dl>
+            <dl>
+                <dt>重置密码成功</dt>
+                <dd><i></i></dd>
+            </dl>
+        </div>
+
+        <div class="part2-con">
+            <form action="">
+                <p class="phoneNum">您输入的手机号为 <span>158******08</span></p>
+                <p class="getTip hide">短信已发送到您的手机，请输入手机中的验证码，如未收到，请稍后再试，或者点击 <a href="javascript:;">获取电话验证码</a>。</p>
+                <p class="yzm w223">
+                    <input type="text" name="yzm" placeholder="手机验证码"/>
+                    <button class="yzm-btn get-btn">点击获取验证码</button>
+                    <!--<button class="yzm-btn reGet-btn hide"><span>56</span>秒可重新获取</button>-->
+                </p>
+                <p class="tip">确保手机信号良好，若长时间未收到短信，或验证码已失效，请重新获取</p>
+                <p class="next">
+                    <!--<button class="next-btn" name="submit">下一步</button>-->
+                    <a href="javascript:;" class="next-btn" name="submit">下一步</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        //获取短信验证码
+        var validCode=true;
+        var t = null;
+        $(".get-btn").click(function(){
+            var time=60;
+            var _this=$(this);
+            if (validCode) {
+                validCode=false;
+                _this.addClass("reGet-btn").text("60秒可重新获取");
+                t=setInterval(function  () {
+                    time--;
+                    _this.text(time+"秒可重新获取");
+                    if (time==0) {
+                        clearInterval(t);
+                        validCode=true;
+                        _this.removeClass("reGet-btn");
+                        _this.text("点击获取验证码");
+                        $(".getTip").addClass("hide");
+                    }
+                },1000);
+            }
+            $(".getTip").removeClass("hide");
+            return false;
+        });
+
+        $(".next-btn").click(function(){
+            var val = $(".yzm input").val();
+            if(t && val === "123456"){
+                clearInterval(t);
+                $(".yzm-btn").removeClass("reGet-btn").text("点击获取验证码");
+                $(".getTip").addClass("hide");
+                $(this).attr("href","findPass3.html");
+            }
+        })
+
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title></title>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <style type="text/css">
+        .part1{
+            margin: 150px 0 110px;
+        }
+        .part1 ul{
+            padding: 0 20px;
+            border-bottom: 1px solid #e6e6e6;
+        }
+        .part1 ul li{
+            margin-bottom: 30px;
+        }
+        .part1 ul li h2{
+            color: #000;
+            font-size: 28px;
+            font-weight: normal;
+            float: left;
+        }
+        .part1 ul li.first span{
+            color: #000;
+            float: right;
+            margin: 18px 0 0 20px;
+        }
+        .part1 ul li p,.part1 ul li p span{
+            color: #fff;
+        }
+        .part1 ul li p.type,.part1 ul li p.type span{
+            color: #939393;
+        }
+        .part1 ul li p.added,.part1 ul li p.added span{
+            color: #000;
+        }
+        .part1 ul li p.linkman,.part1 ul li p.tel{
+            display: inline-block;
+            padding: 5px 15px;
+            background-color: #ff6269;
+            border-radius: 7px;
+        }
+
+        .part1 .addInfo{
+            padding-left: 20px;
+        }
+        .part1 .addInfo h4{
+            font-size: 16px;
+            font-weight: normal;
+            color: #ff6269;
+            margin: 30px 0;
+        }
+        .part1 .addInfo p{
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+<!--header 开始-->
+<div class="header">
+    <div class="container clearfix">
+        <div class="head-left left">
+            <div class="head-logo">
+                <a href="../index.html"><img src="../images/logo.png" alt=""/></a>
+            </div>
+            <ul>
+                <li><a href="../financeProducts.html">智能投顾</a></li>
+                <li><a href="../loan/personalLoan.html">智能信贷</a></li>
+                <li><a href="../financePage.html">项目融资</a></li>
+                <li><a href="../dating/datingIndex.html">相亲交友</a></li>
+                <li>
+                    <a href="javascript:;">求职招聘</a>
+                    <ol>
+                        <li><a href="../job/personal1.html">个人中心</a></li>
+                        <li><a href="../job/resumes.html">简历库</a></li>
+                        <li><a href="../job/personal1.html#floor6">求职意向</a></li>
+                        <li><a href="../job/recruitment1.html">高端招聘</a></li>
+                        <li><a href="../job/jobGuidance1.html">求职指导</a></li>
+                    </ol>
+                </li>
+                <li><a href="../news/news.html">咨讯</a></li>
+                <li>
+                    <a href="javascript:;">关于我们</a>
+                    <ol>
+                        <li><a href="../about/aboutUs.html">公司简介</a></li>
+                        <li><a href="../about/contactUs.html">联系我们</a></li>
+                        <li><a href="../about/adService.html">主营业务</a></li>
+                        <li><a href="../about/joinUs.html">加入我们</a></li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+        <div class="head-right right">
+            <ol>
+                <li class="login"><a href="../login1.html"><i></i>登录</a></li>
+                <li class="register"><a href="../login1.html"><i></i>注册</a></li>
+            </ol>
+        </div>
+    </div>
+</div>
+<!--header结束-->
+
+<div class="part1">
+    <div class="container">
+        <ul>
+            <li class="first clearfix">
+                <h2>想买收益率高的信托产品</h2>
+                <span>浏览： <em>445次</em></span>
+                <span>发布时间： <em>2016-11-15</em></span>
+            </li>
+            <li>
+                <p class="type">产品类别：<span>信托产品</span></p>
+            </li>
+            <li>
+                <p class="added">补充说明：<span>收益率要8%以上，期限不限，起投门槛不超过500万</span></p>
+            </li>
+            <li>
+                <p class="linkman">联系人：<span>柳先生</span></p>
+            </li>
+            <li>
+                <p class="tel">联系方式：<span>15810871708</span></p>
+            </li>
+        </ul>
+        <div class="addInfo">
+            <h4>补充信息：</h4>
+            <p>只中意信托产品，出售非类型产品的公司勿扰。</p>
+        </div>
+    </div>
+</div>
+
+<!--footer开始-->
+<div class="footer" id="footer">
+    <div class="container">
+        <div class="attention">
+            <img src="../images/weixin.png" alt=""/>
+            <p>关注微信公众号</p>
+        </div>
+        <div class="contact">
+            <ul>
+                <li class="tel"><span></span>010—58690663</li>
+                <li class="email"><span></span>weihehuo@163.com</li>
+                <li class="address"><span></span>北京市朝阳区建外SOHO东区B座2703</li>
+                <li class="workday"><span></span>周一至周五 9:00——18:00</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--footer结束-->
+<script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".head-left ul li").hover(function(){
+            if($(this).find("ol").size()!==0){
+                $(this).find("ol").css({
+                    display:"block"
+                })
+            }else{
+                $(this).addClass("active").siblings().removeClass("active");
+            }
+        },function(){
+            if($(this).find("ol").size()!==0){
+                $(this).find("ol").css({
+                    display:"none"
+                })
+            }else{
+                $(this).removeClass("active");
+            }
+        })
+    });
+</script>
+</body>
+</html>

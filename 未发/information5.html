@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/information.css"/>
+    <style type="text/css">
+        .box{
+            width: 480px;
+            padding: 60px 25px;
+        }
+        .box ul li{
+            width: 80px;
+            height: 90px;
+            float: left;
+            text-align: center;
+            font-size: 12px;
+            color: #575656;
+        }
+        .box ul li i{
+            width: 70px;
+            height: 70px;
+            display: block;
+            margin: 0 auto 5px;
+            background: url("../images/info-list.png") no-repeat;
+        }
+        .box ul li.item1 i{
+            background-position: 0 0;
+        }
+        .box ul li.item2 i{
+            background-position: 0 -70px;
+        }
+        .box ul li.item3 i{
+            background-position: 0 -140px;
+        }
+        .box ul li.item4 i{
+            background-position: 0 -210px;
+        }
+        .box ul li.item5 i{
+            background-position: 0 -280px;
+        }
+        .box ul li.item6 i{
+            background-position: 0 -350px;
+        }
+        .box ul li.item7 i{
+            background-position: 0 -420px;
+        }
+        .box ul li.item8 i{
+            background-position: 0 -490px;
+        }
+        .box ul li.item9 i{
+            background-position: 0 -560px;
+        }
+        .box ul li.item10 i{
+            background-position: 0 -630px;
+        }
+        .box ul li.item11 i{
+            background-position: 0 -700px;
+        }
+        .box ul li.item12 i{
+            background-position: 0 -770px;
+        }
+
+
+        .box .last{
+            margin: 40px 5px 0;
+        }
+        .box div a.prev{
+            float: left;
+            color: #000;
+            padding: 5px 10px;
+        }
+        .box div a.next{
+            float: right;
+            color: #e60012;
+            padding: 5px 10px;
+        }
+        .box div a.next:hover,.box div a.prev:hover{
+            color: #fff;
+            background-color: #e60012;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <h3>用户名<br />让好职位主动来找你</h3>
+    <form action="">
+        <ul class="clearfix">
+           <li class="item1"><i></i>大华银行</li>
+           <li class="item2"><i></i>中国邮政储蓄银行</li>
+           <li class="item3"><i></i>渣打银行</li>
+           <li class="item4"><i></i>恒生银行</li>
+           <li class="item5"><i></i>厦门国际银行</li>
+           <li class="item6"><i></i>富赛金融</li>
+
+           <li class="item7"><i></i>金恒财富</li>
+           <li class="item8"><i></i>金三优服</li>
+           <li class="item9"><i></i>老虎金融</li>
+           <li class="item10"><i></i>星展银行</li>
+           <li class="item11"><i></i>优财岛</li>
+           <li class="item12"><i></i>中商资本网</li>
+        </ul>
+        <div class="last"><a class="prev" href="information4.html">上一步</a><a class="next" href="#">创建完成</a></div>
+    </form>
+</div>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/jquery.mkinfinite.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function(){
+        $('body').mkinfinite({
+            maxZoom:       1.4,
+            animationTime: 4000,
+            imagesRatio:   (960 / 720),
+            isFixedBG:     true,
+            zoomIn:        true,
+            imagesList:    new Array('images/register-bg.jpg')
+        });
+    });
+
+</script>
+</body>
+</html>

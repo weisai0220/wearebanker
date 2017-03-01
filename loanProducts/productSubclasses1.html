@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title></title>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <style type="text/css">
+        .part1{
+            padding: 125px 0 150px 0;
+        }
+        .part1 .part1-step ul{
+            width: 1250px;
+        }
+        .part1 .part1-step ul li{
+            position: relative;
+            float: left;
+            color: #fff;
+            font-size: 18px;
+            width: 300px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: #ffb3b6;
+            margin-right: 6px;
+        }
+        .part1 .part1-step ul li.second:before,.part1 .part1-step ul li.third:before,.part1 .part1-step ul li.fourth:before{
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: " ";
+            width: 0;
+            height: 0;
+            border-width: 20px 24px;
+            border-style: solid;
+            border-color: transparent transparent transparent #fff;
+        }
+        .part1 .part1-step ul li.first:after,.part1 .part1-step ul li.second:after,.part1 .part1-step ul li.third:after{
+            position: absolute;
+            z-index: 2;
+            right: -48px;
+            top: 0;
+            content: " ";
+            width: 0;
+            height: 0;
+            border-width: 20px 24px;
+            border-style: solid;
+            border-color: transparent transparent transparent #ffb3b6;
+        }
+        .part1 .part1-step ul li.cur{
+            background-color: #ff6269;
+        }
+        .part1 .part1-step ul li.cur:before{
+            border-color: transparent transparent transparent #fff;
+        }
+        .part1 .part1-step ul li.cur:after{
+            border-color: transparent transparent transparent #ff6269;
+        }
+        .part1 .part1-step ul li a{
+            color: #1055e2;
+            font-size: 18px;
+        }
+
+        .part1 .subClass{
+            padding: 50px 0 0 40px;
+        }
+        .part1 .subClass a{
+            width: 80px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            display: block;
+            float: left;
+            margin-right: 30px;
+            color: #1055e2;
+            font-size: 16px;
+        }
+        .part1 .subClass a:hover{
+            color: #fff;
+            background-color: #ff6269;
+        }
+    </style>
+</head>
+<body>
+<!--header 开始-->
+<div class="header">
+    <div class="container clearfix">
+        <div class="head-left left">
+            <div class="head-logo">
+                <a href="../index.html"><img src="../images/logo.png" alt=""/></a>
+            </div>
+            <ul>
+                <li><a href="../financeProducts.html">智能投顾</a></li>
+                <li><a href="../loan/personalLoan.html">智能信贷</a></li>
+                <li><a href="../financePage.html">项目融资</a></li>
+                <li><a href="../dating/datingIndex.html">相亲交友</a></li>
+                <li>
+                    <a href="javascript:;">求职招聘</a>
+                    <ol>
+                        <li><a href="../job/personal1.html">个人中心</a></li>
+                        <li><a href="../job/resumes.html">简历库</a></li>
+                        <li><a href="../job/personal1.html#floor6">求职意向</a></li>
+                        <li><a href="../job/recruitment1.html">高端招聘</a></li>
+                        <li><a href="../job/jobGuidance1.html">求职指导</a></li>
+                    </ol>
+                </li>
+                <li><a href="../news/news.html">咨讯</a></li>
+                <li>
+                    <a href="javascript:;">关于我们</a>
+                    <ol>
+                        <li><a href="../about/aboutUs.html">公司简介</a></li>
+                        <li><a href="../about/contactUs.html">联系我们</a></li>
+                        <li><a href="../about/adService.html">主营业务</a></li>
+                        <li><a href="../about/joinUs.html">加入我们</a></li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+        <div class="head-right right">
+            <ol>
+                <li class="login"><a href="../login1.html"><i></i>登录</a></li>
+                <li class="register"><a href="../login1.html"><i></i>注册</a></li>
+            </ol>
+        </div>
+    </div>
+</div>
+<!--header结束-->
+
+<div class="part1">
+    <div class="container">
+        <div class="part1-step">
+            <ul class="clearfix">
+                <li class="first">1、金融产品 ( <a href="javascript:;">重选大类</a> ) </li>
+                <li class="second cur">2、选择小类</li>
+                <li class="third">3、填写信息</li>
+                <li class="fourth">4、发布成功</li>
+            </ul>
+        </div>
+        <div class="subClass">
+            <a href="productRelease1.html">银行</a>
+            <a href="productRelease.html?id=资管信托">资管信托</a>
+            <a href="productRelease.html?id=基金类">基金类</a>
+            <a href="productRelease4.html">保险</a>
+            <a href="p2pRelease.html">P2P</a>
+            <a href="productRelease5.html">另类投资</a>
+            <a href="productRelease6.html">产品求购</a>
+        </div>
+    </div>
+</div>
+
+<!--footer开始-->
+<div class="footer" id="footer">
+    <div class="container">
+        <div class="attention">
+            <img src="../images/weixin.png" alt=""/>
+            <p>关注微信公众号</p>
+        </div>
+        <div class="contact">
+            <ul>
+                <li class="tel"><span></span>010—58690663</li>
+                <li class="email"><span></span>weihehuo@163.com</li>
+                <li class="address"><span></span>北京市朝阳区建外SOHO东区B座2703</li>
+                <li class="workday"><span></span>周一至周五 9:00——18:00</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--footer结束-->
+
+<script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".head-left ul li").hover(function(){
+            if($(this).find("ol").size()!==0){
+                $(this).find("ol").css({
+                    display:"block"
+                })
+            }else{
+                $(this).addClass("active").siblings().removeClass("active");
+            }
+        },function(){
+            if($(this).find("ol").size()!==0){
+                $(this).find("ol").css({
+                    display:"none"
+                })
+            }else{
+                $(this).removeClass("active");
+            }
+        })
+    });
+</script>
+
+</body>
+</html>

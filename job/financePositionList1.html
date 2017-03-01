@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title></title>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/financePositionList1.css"/>
+</head>
+<body>
+<!--nav开始-->
+<div class="nav">
+    <div class="container clearfix">
+        <div class="nav-left left">
+            <ul>
+                <li><a href="javascript:;">进入企业版</a>|</li>
+                <li><a href="../index.html">返回首页</a></li>
+            </ul>
+        </div>
+        <div class="nav-right right">
+            <ul>
+                <li><a href="javascript:;">消息</a>|</li>
+                <li><a href="personal1.html">我的简历</a>|</li>
+                <li><a href="javascript:;">投递箱</a>|</li>
+                <li><a href="javascript:;">收藏夹</a>|</li>
+                <li>
+                    <a href="javascript:;">用户名</a>
+                    <ol>
+                        <li><a href="mySubscription.html">我的订阅</a></li>
+                        <li><a href="javascript:;">职位邀请</a></li>
+                        <li><a href="javascript:;">账号申请</a></li>
+                        <li><a href="javascript:;">去企业版</a></li>
+                        <li><a href="javascript:;">退出</a></li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--nav结束-->
+
+<!--nav1开始-->
+<div class="nav1">
+    <div class="container">
+        <ul class="clearfix">
+            <li><a href="personal1.html">个人中心</a></li>
+            <li><a href="personal1.html#floor6">求职意向</a></li>
+            <li><a href="recruitment1.html">高端招聘</a></li>
+            <li><a href="jobGuidance1.html">求职指导</a></li>
+        </ul>
+    </div>
+</div>
+<!--nav1结束-->
+
+<div class="financeList-content">
+    <div class="container">
+        <div class="search-box">
+            <div class="city-box drop-box">
+                <div class="city-con drop-down">
+                    <input type="text" value="北京"/>
+                    <i></i>
+                </div>
+                <div class="city-list drop-list">
+                    <a href="javascript:;" data-value="北京">北京</a>
+                    <a href="javascript:;" data-value="上海">上海</a>
+                    <a href="javascript:;" data-value="广州">广州</a>
+                    <a href="javascript:;" data-value="深圳">深圳</a>
+                </div>
+            </div>
+            <input type="text" placeholder="搜索关键词" class="search-text"/>
+            <input type="submit" value="" class="search-btn"/>
+        </div>
+        <div class="lookup-box">
+            <div class="industry-box drop-box">
+                <div class="industry-con drop-down">
+                    <input type="text" value="行业"/>
+                    <i></i>
+                </div>
+                <div class="industry-list drop-list">
+                    <a href="javascript:;" data-value="银行">银行</a>
+                    <a href="javascript:;" data-value="保险">保险</a>
+                    <a href="javascript:;" data-value="投资">投资</a>
+                    <a href="javascript:;" data-value="会计/审计">会计/审计</a>
+                    <a href="javascript:;" data-value="信托/担保/拍卖/典当">信托/担保/拍卖/典当</a>
+                </div>
+            </div>
+            <div class="salary-box drop-box">
+                <div class="salary-con drop-down">
+                    <input type="text" value="薪资"/>
+                    <i></i>
+                </div>
+                <div class="salary-list drop-list">
+                    <a href="javascript:;" data-value="10-15万">10-15万</a>
+                    <a href="javascript:;" data-value="15-20万">15-20万</a>
+                    <a href="javascript:;" data-value="20-30万">20-30万</a>
+                    <a href="javascript:;" data-value="50-100万">50-100万</a>
+                    <a href="javascript:;" data-value="100万以上">100万以上</a>
+                </div>
+            </div>
+           <!-- <div class="city-box drop-box">
+                <div class="city-con drop-down">
+                    <input type="text" value="地区" disabled/>
+                    <i></i>
+                </div>
+                <div class="city-list drop-list">
+                    <a href="javascript:;" data-value="北京">北京</a>
+                    <a href="javascript:;" data-value="上海">上海</a>
+                    <a href="javascript:;" data-value="广州">广州</a>
+                    <a href="javascript:;" data-value="深圳">深圳</a>
+                </div>
+            </div>-->
+            <div class="addtime-box drop-box">
+                <div class="addtime-con drop-down">
+                    <input type="text" value="发布时间"/>
+                    <i></i>
+                </div>
+                <div class="addtime-list drop-list">
+                    <a href="javascript:;" data-value="不限">不限</a>
+                    <a href="javascript:;" data-value="一天内">一天内</a>
+                    <a href="javascript:;" data-value="三天内">三天内</a>
+                    <a href="javascript:;" data-value="一周内">一周内</a>
+                    <a href="javascript:;" data-value="一个月内">一个月内</a>
+                </div>
+            </div>
+            <div class="scale-box drop-box">
+                <div class="scale-con drop-down">
+                    <input type="text" value="企业规模"/>
+                    <i></i>
+                </div>
+                <div class="scale-list drop-list">
+                    <a href="javascript:;" data-value="1-49人">1-49人</a>
+                    <a href="javascript:;" data-value="100-499人">100-499人</a>
+                    <a href="javascript:;" data-value="500-999人">500-999人</a>
+                    <a href="javascript:;" data-value="1000-1999人">1000-1999人</a>
+                    <a href="javascript:;" data-value="2000-4999人">2000-4999人</a>
+                    <a href="javascript:;" data-value="5000-9999人">5000-9999人</a>
+                    <a href="javascript:;" data-value="10000人以上">10000人以上</a>
+                </div>
+            </div>
+            <div class="property-box drop-box">
+                <div class="property-con drop-down">
+                    <input type="text" value="企业性质"/>
+                    <i></i>
+                </div>
+                <div class="property-list drop-list">
+                    <a href="javascript:;" data-value="外企/外埠独资">外企/外埠独资</a>
+                    <a href="javascript:;" data-value="中外合营/合资">中外合营/合资</a>
+                    <a href="javascript:;" data-value="私营/民营企业">私营/民营企业</a>
+                    <a href="javascript:;" data-value="国有企业">国有企业</a>
+                    <a href="javascript:;" data-value="上市公司">上市公司</a>
+                    <a href="javascript:;" data-value="政府/非盈利机构">政府/非盈利机构</a>
+                    <a href="javascript:;" data-value="事业单位">事业单位</a>
+                    <a href="javascript:;" data-value="其他">其他</a>
+                </div>
+            </div>
+        </div>
+        <div class="position-list">
+            <div class="position-box">
+                <i></i>
+                <div class="position-box-left">
+                    <h3><a href="javascript:;">业务经理</a></h3>
+                    <p><a href="javascript:;">面议|北京|本科或以上|2年工作经验</a></p>
+                </div>
+                <div class="position-box-right">
+                    <h3><a href="javascript:;">加多得投资(北京)有限公司</a></h3>
+                    <span>基金/证券/期货/投资</span>
+                </div>
+            </div>
+            <div class="position-box">
+                <i></i>
+                <div class="position-box-left">
+                    <h3><a href="javascript:;">投资顾问、经理团队、总监团队</a></h3>
+                    <p><a href="javascript:;">面议|北京|本科或以上|5年工作经验</a></p>
+                </div>
+                <div class="position-box-right">
+                    <h3><a href="javascript:;">中汇鑫安北京国际投资管理有限公司</a></h3>
+                    <span>基金/证券/期货/投资</span>
+                </div>
+            </div>
+            <div class="position-box">
+                <i></i>
+                 <div class="position-box-left">
+                     <h3><a href="javascript:;">销售精英</a></h3>
+                     <p><a href="javascript:;">面议|北京|本科或以上|2年工作经验</a></p>
+                 </div>
+                 <div class="position-box-right">
+                     <h3><a href="javascript:;">华宇国信</a></h3>
+                     <span>基金/证券/期货/投资</span>
+                 </div>
+             </div>
+            <div class="position-box">
+                <i></i>
+                 <div class="position-box-left">
+                     <h3><a href="javascript:;">业务总监</a></h3>
+                     <p><a href="javascript:;">面议|北京|本科或以上|3年工作经验</a></p>
+                 </div>
+                 <div class="position-box-right">
+                     <h3><a href="javascript:;">天胜财富</a></h3>
+                     <span>基金/证券/期货/投资</span>
+                 </div>
+            </div>
+            <div class="position-box">
+                <i></i>
+                 <div class="position-box-left">
+                     <h3><a href="javascript:;">市场总监</a></h3>
+                     <p><a href="javascript:;">面议|北京|本科或以上|7年工作经验</a></p>
+                 </div>
+                 <div class="position-box-right">
+                     <h3><a href="javascript:;">海峡新能源产业集团</a></h3>
+                     <span>基金/证券/期货/投资</span>
+                 </div>
+             </div>
+            <div class="position-box">
+                <i></i>
+                 <div class="position-box-left">
+                     <h3><a href="javascript:;">渠道经理</a></h3>
+                     <p><a href="javascript:;">面议|北京|本科或以上|1年工作经验</a></p>
+                 </div>
+                 <div class="position-box-right">
+                     <h3><a href="javascript:;">海棠金融</a></h3>
+                     <span>基金/证券/期货/投资</span>
+                 </div>
+             </div>
+            <div class="position-box">
+                <i></i>
+                 <div class="position-box-left">
+                     <h3><a href="javascript:;">理财顾问</a></h3>
+                     <p><a href="javascript:;">面议|北京|本科或以上|3年工作经验</a></p>
+                 </div>
+                 <div class="position-box-right">
+                     <h3><a href="javascript:;">华兴控股集团</a></h3>
+                     <span>基金/证券/期货/投资</span>
+                 </div>
+             </div>
+            <div class="position-box">
+                <i></i>
+                 <div class="position-box-left">
+                     <h3><a href="javascript:;">销售总监</a></h3>
+                     <p><a href="javascript:;">面议|北京|本科或以上|2年工作经验</a></p>
+                 </div>
+                 <div class="position-box-right">
+                     <h3><a href="javascript:;">北京国鑫旺赢投资有限公司</a></h3>
+                     <span>基金/证券/期货/投资</span>
+                 </div>
+             </div>
+            <div class="position-box">
+                <i></i>
+                 <div class="position-box-left">
+                     <h3><a href="javascript:;">电销人员</a></h3>
+                     <p><a href="javascript:;">面议|北京|本科或以上|2年工作经验</a></p>
+                 </div>
+                 <div class="position-box-right">
+                     <h3><a href="javascript:;">北京盛世春天基金</a></h3>
+                     <span>基金/证券/期货/投资</span>
+                 </div>
+             </div>
+            <div class="position-box">
+                <i></i>
+                 <div class="position-box-left">
+                     <h3><a href="javascript:;">基金公司总经理</a></h3>
+                     <p><a href="javascript:;">面议|北京|本科或以上|6年工作经验</a></p>
+                 </div>
+                 <div class="position-box-right">
+                     <h3><a href="javascript:;">北京润鼎财富投资基金管理有限公司</a></h3>
+                     <span>基金/证券/期货/投资</span>
+                 </div>
+             </div>
+            <div class="position-box">
+                <i></i>
+                 <div class="position-box-left">
+                     <h3><a href="javascript:;">理财经理</a></h3>
+                     <p><a href="javascript:;">面议|北京|本科或以上|6年工作经验</a></p>
+                 </div>
+                 <div class="position-box-right">
+                     <h3><a href="javascript:;">深圳牛王资本</a></h3>
+                     <span>基金/证券/期货/投资</span>
+                 </div>
+             </div>
+            <div class="position-box">
+                <i></i>
+                 <div class="position-box-left">
+                     <h3><a href="javascript:;">基金公司总经理</a></h3>
+                     <p><a href="javascript:;">面议|北京|本科或以上|3年工作经验</a></p>
+                 </div>
+                 <div class="position-box-right">
+                     <h3><a href="javascript:;">北京润鼎财富投资基金管理有限公司</a></h3>
+                     <span>基金/证券/期货/投资</span>
+                 </div>
+             </div>
+            <div class="position-box">
+                <i></i>
+                 <div class="position-box-left">
+                     <h3><a href="javascript:;">基金经理</a></h3>
+                     <p><a href="javascript:;">面议|北京|本科或以上|1年工作经验</a></p>
+                 </div>
+                 <div class="position-box-right">
+                     <h3><a href="javascript:;">中科创集团</a></h3>
+                     <span>基金/证券/期货/投资</span>
+                 </div>
+             </div>
+            <div class="position-box">
+                <i></i>
+                 <div class="position-box-left">
+                     <h3><a href="javascript:;">法务经理</a></h3>
+                     <p><a href="javascript:;">面议|北京|本科或以上|1年工作经验</a></p>
+                 </div>
+                 <div class="position-box-right">
+                     <h3><a href="javascript:;">深圳市绿石创投基金有限公司</a></h3>
+                     <span>基金/证券/期货/投资</span>
+                 </div>
+             </div>
+            <div class="position-box">
+                <i></i>
+                 <div class="position-box-left">
+                     <h3><a href="javascript:;">客户经理</a></h3>
+                     <p><a href="javascript:;">面议|北京|本科或以上|1年工作经验</a></p>
+                 </div>
+                 <div class="position-box-right">
+                     <h3><a href="javascript:;">宜信普惠房山分公司</a></h3>
+                     <span>基金/证券/期货/投资</span>
+                 </div>
+             </div>
+            <div class="position-box">
+                <i></i>
+                 <div class="position-box-left">
+                     <h3><a href="javascript:;">业务员</a></h3>
+                     <p><a href="javascript:;">面议|北京|本科或以上|1年工作经验</a></p>
+                 </div>
+                 <div class="position-box-right">
+                     <h3><a href="javascript:;">北京利美德投资管理有限公司</a></h3>
+                     <span>基金/证券/期货/投资</span>
+                 </div>
+             </div>
+        </div>
+        <div class="paging-list">
+            <a class="first" href="javascript:;"><</a>
+            <a class="prev" href="javascript:;">上一页</a>
+            <ul>
+                <li class="cur">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+            <a class="next" href="javascript:;">下一页</a>
+            <a class="last" href="javascript:;">></a>
+        </div>
+    </div>
+</div>
+
+<!--footer开始-->
+<div class="footer" id="footer">
+    <div class="container">
+        <div class="attention">
+            <img src="../images/weixin.png" alt=""/>
+            <p>关注微信公众号</p>
+        </div>
+        <div class="contact">
+            <ul>
+                <li class="tel"><span></span>010—58690663</li>
+                <li class="email"><span></span>weihehuo@163.com</li>
+                <li class="address"><span></span>北京市朝阳区建外SOHO东区B座2703</li>
+                <li class="workday"><span></span>周一至周五 9:00——18:00</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--footer结束-->
+
+<script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.nav-right ul li').hover(function(){
+            if($(this).find('ol').size()!==0){
+                $(this).find("ol").css({
+                    display:"block"
+                })
+            }
+        },function(){
+            if($(this).find("ol").size()!==0){
+                $(this).find("ol").css({
+                    display:"none"
+                })
+            }
+        })
+    })
+
+    /*nav1导航条的鼠标划过效果*/
+    $(function(){
+        $('.nav1 ul li').hover(function(){
+            $(this).addClass('cur').siblings().removeClass('cur');
+        })
+    })
+
+    $(function(){
+        var w = $('.paging-list ul li').outerWidth(true),
+                len = $('.paging-list li').length;
+        $('.position-list div:even').addClass("mt51");
+        $('.paging-list ul').css({
+            width: w*len
+        })
+    })
+
+    $(function(){
+        selectBox(".industry-con");
+        selectBox(".salary-con");
+        selectBox(".city-con");
+        selectBox(".addtime-con");
+        selectBox(".scale-con");
+        selectBox(".property-con");
+
+        function selectBox(box){
+            $(box).find('input').focusin(function(){
+                $(box).next().show();
+            }).focusout(function(){
+                setTimeout(function(){
+                    $(box).next().hide();
+                },200)
+            });
+        }
+    })
+
+    $(function(){
+        selectItem(".industry-box");
+        selectItem(".salary-box");
+        selectItem(".city-box");
+        selectItem(".addtime-box");
+        selectItem(".scale-box");
+        selectItem(".property-box");
+
+        function selectItem(box){
+            var val1;
+            $(box).find("a").click(function(){
+                val1 = $(this).attr("data-value");
+                $(box).find("input").val(val1);
+                $(this).parent().css("display","none");
+            });
+        }
+    })
+</script>
+</body>
+</html>

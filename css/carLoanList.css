@@ -1,0 +1,258 @@
+@charset "utf-8";
+.nav{
+    margin-top: 80px;
+    height: 65px;
+    line-height: 65px;
+    width: 100%;
+    min-width: 1230px;
+    border-bottom: 1px solid #efefef;
+}
+.nav .container{
+    overflow: hidden;
+}
+.nav ul{
+    margin-left: -20px;
+}
+.nav ul li{
+    float: left;
+    color: #efefef;
+}
+.nav ul li a{
+    color: #c0c0c0;
+    font-size: 18px;
+    padding: 0 20px;
+}
+.nav ul li a:hover{
+    color: #3e3e3e;
+}
+.nav ul li.cur a{
+    color: #3e3e3e;
+}
+
+.part1 img{
+    width: 1230px;
+    height: 402px;
+}
+
+.part2 .part2-top{
+    width: 1214px;
+    min-width: 1214px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e5e5e5;
+    margin: 0 auto 25px;
+}
+.part2 .part2-top h2{
+    color: #000;
+    font-size: 18px;
+    margin: 30px auto 0;
+    padding-left: 10px;
+    border-left: 8px solid #fa0000;
+}
+.part2 .container{
+    width: 1320px;
+    min-width: 1320px;
+    margin: 0 auto;
+}
+.part2 .part2-con{
+    width: 1320px;
+    height: 275px;
+    position: relative;
+}
+.part2 .part2-con .carousel{
+    width: 1230px;
+    height: 275px;
+    overflow: hidden;
+    position: absolute;
+    left: 45px;
+}
+.part2 .part2-con dl{
+    position: absolute;
+    width: 3600px;
+    height: 275px;
+}
+.part2 .part2-con dl dd{
+    position: relative;
+    float: left;
+    width: 300px;
+    height: 275px;
+    margin-right: 10px;
+    text-align: center;
+    background-color: #f6f6f6;
+}
+.part2 .part2-con dl dd img{
+    display: block;
+    width: 200px;
+    margin: 30px auto 25px;
+}
+.part2 .part2-con dl dd h4{
+    color: #000;
+    font-size: 16px;
+    font-weight: normal;
+}
+.part2 .part2-con dl dd p.price{
+    color: #a0a0a0;
+    font-size: 14px;
+    margin: 10px 0;
+}
+.part2 .part2-con dl dd p.ask{
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    background-color: #1d1d1d;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+}
+.part2 .part2-con dl dd p.ask a{
+    color: #fff;
+}
+.part2 .part2-con .btn{
+
+}
+.part2 .part2-con .btn span{
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    margin-top: -15px;
+    display: inline-block;
+    width: 22px;
+    height: 31px;
+    background: url("../images/financePage-part5-btn.png") no-repeat;
+}
+.part2 .part2-con .btn span.left{
+    left: 0;
+    background-position: 0 0;
+}
+.part2 .part2-con .btn span.right{
+    right: 0;
+    background-position: -22px 0;
+}
+
+
+.part3{
+    margin-top: 40px;
+}
+.part3 .part3-left,.part3 .part3-right{
+    width: 600px;
+    float: left;
+}
+.part3 .part3-left{
+    margin-right: 30px;
+}
+.part3 .part3-left h2,.part3 .part3-right h2{
+    color: #000;
+    font-size: 18px;
+    padding-left: 10px;
+    border-left: 8px solid #fa0000;
+    margin-bottom: 15px;
+}
+.part3 .part3-right h2{
+    float: left;
+}
+.part3 .part3-right a{
+    float: right;
+}
+.part3 .part3-right a:hover{
+    color: #ff4651;
+    text-decoration: underline;
+}
+.part3 .part3-left ul,.part3 .part3-right ul{
+    border-top: 2px solid #e5e5e5;
+}
+.part3 .part3-left ul li,.part3 .part3-right ul li{
+    padding: 20px 0;
+    border-bottom: 1px dashed #efefef;
+}
+.part3 .part3-left ul li .img,.part3 .part3-right ul li .img{
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+    float: left;
+}
+.part3 .part3-left ul li .img img,.part3 .part3-right ul li .img img{
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+}
+.part3 .part3-left ul li .detail,.part3 .part3-right ul li .detail{
+    float: left;
+    width: 345px;
+}
+.part3 .part3-left ul li .detail p.name,.part3 .part3-right ul li .detail p.name{
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.part3 .part3-left ul li .detail p.des,.part3 .part3-right ul li .detail p.des{
+    color: #6c6c6c;
+    font-size: 14px;
+}
+.part3 .part3-left ul li .view,.part3 .part3-right ul li .view{
+    float: left;
+}
+.part3 .part3-left ul li .view a,.part3 .part3-right ul li .view a{
+    color: #000;
+    font-size: 18px;
+    display: block;
+    width: 98px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 2px;
+    margin-top: 10px;
+}
+.part3 .part3-left ul li:hover .view a,.part3 .part3-right ul li:hover .view a{
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+}
+
+.part4 .part4-top{
+    padding: 30px 0 10px;
+    border-bottom: 2px solid #e5e5e5;
+    margin-bottom: 15px;
+}
+.part4 .part4-top h2{
+    float: left;
+    color: #000;
+    font-size: 18px;
+    padding-left: 10px;
+    border-left: 8px solid #fa0000;
+}
+.part4 .part4-top a{
+    float: right;
+}
+.part4 .part4-top a:hover{
+    color: #ff4651;
+    text-decoration: underline;
+}
+.part4 .part4-con ul{
+    width: 1260px;
+    margin-bottom: 50px;
+}
+.part4 .part4-con ul li{
+    width: 222px;
+    float: left;
+    margin-right: 30px;
+}
+.part4 .part4-con ul li .img{
+    width: 222px;
+    height: 138px;
+}
+.part4 .part4-con ul li .img img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.part4 .part4-con ul li .name p{
+    color: #6c6c6c;
+    text-align: center;
+}
+.part4 .part4-con ul li .name p.cardName{
+    color: #3d3d3d;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 15px;
+}

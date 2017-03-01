@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/information.css"/>
+
+    <style type="text/css">
+        .box ul li input.username,.box ul li input.phone,.box ul li input.cityName{
+            width: 350px;
+            height: 40px;
+            line-height: 40px;
+            padding-left: 10px;
+            border-radius: 5px;
+        }
+        .box ul li .edu-box,.box ul li .work-box{
+            width: 160px;
+            height: 40px;
+            display: inline-block;
+            margin-right: 35px;
+            position: relative;
+            *float:left;
+            *margin-right:40px;
+        }
+        .box ul li .edu-list,.box ul li .work-list,.box ul li .city-list{
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            z-index: 2;
+            width: 158px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+        .box ul li .city-list{
+            width: 358px;
+        }
+        .box ul li .edu-list a,.box ul li .work-list a,.box ul li .city-list a{
+            display: block;
+            line-height: 25px;
+            padding-left: 10px;
+        }
+        .box ul li .edu-list a:hover,.box ul li .work-list a:hover,.box ul li .city-list a:hover{
+            color: #e60012;
+        }
+        .box ul li .city-box,.box ul li .city-con{
+            position: relative;
+        }
+        .box ul li input.education1,.box ul li input.workYear{
+            width: 130px;
+            height: 40px;
+            line-height: 40px;
+            padding: 0 20px 0 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .box ul li .edu-con i,.box ul li .work-con i,.box ul li .city-con i{
+            cursor: pointer;
+            width: 0;
+            height: 0;
+            border-width: 8px;
+            border-color: #d3d3d3 transparent transparent transparent;
+            border-style: solid;
+            position: absolute;
+            right: 20px;
+            top: 16px;
+        }
+        .box ul li .work-box{
+            margin-right: 0;
+        }
+        .box ul li.next{
+            margin-top: 40px;
+            text-align: center;
+        }
+        .box ul li.next a{
+            color: #e60012;
+            padding: 5px 10px;
+        }
+        .box ul li.next a:hover{
+            color: #fff;
+            background-color: #e60012;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <h3>个人信息</h3>
+    <form action="">
+        <ul>
+            <li><input class="username" type="text" name="username" title="请输入姓名" placeholder="姓名"/></li>
+            <li class="clearfix">
+                <!--最高学历开始-->
+                <div class="edu-box">
+                    <div class="edu-con">
+                        <input class="education1" id="education1" type="text" title="最高学历" placeholder="最高学历"/>
+                        <i></i>
+                    </div>
+                    <div class="edu-list">
+                        <a href="javascript:;" data-value="大专">大专</a>
+                        <a href="javascript:;" data-value="本科">本科</a>
+                        <a href="javascript:;" data-value="硕士">硕士</a>
+                        <a href="javascript:;" data-value="博士">博士</a>
+                        <a href="javascript:;" data-value="其他">其他</a>
+                    </div>
+                </div>
+                <!--最高学历结束-->
+                <!--工作年限开始-->
+                <div class="work-box">
+                    <div class="work-con">
+                        <input class="workYear" id="workYear" title="工作年限" type="text" placeholder="工作年限"/>
+                        <i></i>
+                    </div>
+                    <div class="work-list">
+                        <a href="javascript:;" data-value="1年">1年</a>
+                        <a href="javascript:;" data-value="2年">2年</a>
+                        <a href="javascript:;" data-value="3年">3年</a>
+                        <a href="javascript:;" data-value="4年">4年</a>
+                        <a href="javascript:;" data-value="5年">5年</a>
+                        <a href="javascript:;" data-value="6年">6年</a>
+                        <a href="javascript:;" data-value="7年">7年</a>
+                        <a href="javascript:;" data-value="8年">8年</a>
+                        <a href="javascript:;" data-value="9年">9年</a>
+                        <a href="javascript:;" data-value="10年">10年</a>
+                        <a href="javascript:;" data-value="10年以上">10年以上</a>
+                    </div>
+                </div>
+                <!--工作年限结束-->
+            </li>
+            <li><input class="phone" type="text" name="phone" title="请输入您的电话号码" placeholder="请输入您的电话号码"/></li>
+            <li>
+                <!--所在城市开始-->
+                <div class="city-box">
+                    <div class="city-con">
+                        <input class="cityName" id="cityName" type="text" title="请选择您所在的城市" placeholder="请选择您所在的城市"/>
+                        <i></i>
+                    </div>
+                    <div class="city-list">
+                        <a href="javascript:;" data-value="北京">北京</a>
+                        <a href="javascript:;" data-value="上海">上海</a>
+                        <a href="javascript:;" data-value="广州">广州</a>
+                        <a href="javascript:;" data-value="深圳">深圳</a>
+                        <a href="javascript:;" data-value="杭州">杭州</a>
+                        <a href="javascript:;" data-value="成都">成都</a>
+                        <a href="javascript:;" data-value="西安">西安</a>
+                        <a href="javascript:;" data-value="南京">南京</a>
+                        <a href="javascript:;" data-value="厦门">厦门</a>
+                        <a href="javascript:;" data-value="武汉">武汉</a>
+                    </div>
+                </div>
+                <!--所在城市结束-->
+            </li>
+            <li class="next"><a href="#">下一步继续完善职业信息</a></li>
+        </ul>
+    </form>
+</div>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/jquery.mkinfinite.js"></script>
+<script type="text/javascript">
+    /*使背景图片运动*/
+    $(document).ready(function(){
+        $('body').mkinfinite({
+            maxZoom:       1.4,
+            animationTime: 4000,
+            imagesRatio:   (960 / 720),
+            isFixedBG:     true,
+            zoomIn:        true,
+            imagesList:    new Array('images/register-bg.jpg')
+        });
+    });
+
+    $(function(){
+        function placeholderSupport() {    // 判断浏览器是否支持 placeholder
+            return 'placeholder' in document.createElement('input');
+        }
+
+        function checkEmpty(fill){
+            if($(fill).val()==""){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        if(!placeholderSupport()){
+            $(document).on('focus', '[placeholder]',function() {
+                var input = $(this);
+                if (input.val() == input.attr('placeholder')) {
+                    input.val('');
+                }
+            });
+            $(document).on('blur', '[placeholder]',function() {
+                var input = $(this);
+                if (input.val() == '' || input.val() == input.attr('placeholder')) {
+                    input.val(input.attr('placeholder'));
+                }
+            });
+            $('[placeholder]').blur();
+
+            /*IE浏览器对信息的完整性进行检查*/
+            $(".next a").click(function(){
+                if((checkEmpty(".username")||$(".username").val()!=="姓名")&&(checkEmpty(".phone")||$(".phone").val()!=="请输入您的电话号码")&&(checkEmpty(".education1")||$(".education1").val()!=="最高学历")&&(checkEmpty(".workYear")||$(".workYear").val()!=="工作年限")&&(checkEmpty(".cityName")||$(".cityName").val()!=="请选择您所在的城市")){
+                    $(this).attr("href","information2.html");
+                }else{
+                    alert("请将个人信息填写完整！")
+                }
+            })
+
+        }else{
+            $(".next a").click(function(){
+                if((!checkEmpty(".username"))&&(!checkEmpty(".phone"))&&(!checkEmpty(".education1"))&&(!checkEmpty(".workYear"))&&(!checkEmpty(".cityName"))){
+                    $(this).attr("href","information2.html");
+                }else{
+                    alert("请将个人信息填写完整！")
+                }
+            })
+        }
+    });
+
+    $(function(){
+        selectBox(".edu-con");
+        selectBox(".work-con");
+        selectBox(".city-con");
+        function selectBox(box){
+            $(box).find('input').focusin(function(){
+                $(box).next().show();
+            }).focusout(function(){
+                setTimeout(function(){
+                    $(box).next().hide();
+                },200)
+            });
+        }
+    })
+    $(function(){
+        selectItem(".work-box");
+        selectItem(".edu-box");
+        selectItem(".city-box");
+        function selectItem(box){
+            $(box).find("a").click(function(){
+                $(this).parent().css("display","none");
+                $(box).find("input").val($(this).attr("data-value"))
+            })
+        }
+    })
+    $(function(){
+
+        $(".phone").blur(function(){
+            if($(this).val()==""){
+                $(this).parent().find("span").html("");
+                $(this).parent().append("<span style='color: #f00;'>请填写您的手机号</span>")
+            }else if($(this).val().length!=11){
+                $(this).parent().find("span").html("");
+                $(this).parent().append("<span style='color: #f00;'>请核对您的手机号是否正确</span>")
+            }else{
+                $(this).parent().find("span").html("");
+            }
+        });
+        $(".username").blur(function(){
+            var myreg1 = /^[\u4e00-\u9fa5]{2,4}$/;
+            var name = $(this).val();
+            if(name==""){
+                $(this).parent().find("span").html("");
+                $(this).parent().append("<span style='color: #f00;'>请输入您的姓名</span>")
+            }else if(name.length<2||name.length>4){
+                $(this).parent().find("span").html("");
+                $(this).parent().append("<span style='color: #f00;'>请检查姓名是否输入正确</span>")
+            }else if(!myreg1.test(name)){
+                $(this).parent().find("span").html("");
+                $(this).parent().append("<span style='color: #f00;'>姓名应为中文</span>")
+            }else{
+                $(this).parent().find("span").html("");
+            }
+        })
+    })
+</script>
+</body>
+</html>

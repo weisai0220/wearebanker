@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title></title>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/common1.css"/>
+    <link rel="stylesheet" href="../css/hairPost1.css"/>
+</head>
+<body>
+<!--nav开始-->
+<div class="nav">
+    <div class="container clearfix">
+        <div class="nav-left left">
+            <ul>
+                <li><a href="javascript:;">进入企业版</a>|</li>
+                <li><a href="../index.html">返回首页</a></li>
+            </ul>
+        </div>
+        <div class="nav-right right">
+            <ul>
+                <li>您好，<span>xxx</span></li>
+                <li class="settings">
+                    <a href="javascript:;"><i></i>系统设置</a>
+                    <ol>
+                        <li><a href="javascript:;">修改账户信息</a></li>
+                        <li><a href="javascript:;">企业主页</a></li>
+                    </ol>
+                </li>
+                <li class="exit"><a href="javascript:;"><i></i>安全退出</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--nav结束-->
+<!--nav1开始-->
+<div class="nav1">
+    <div class="container">
+        <ul class="clearfix">
+            <li class="cur"><a href="hairPost1.html">发职位</a></li>
+            <li><a href="findResume.html">找简历</a></li>
+            <li><a href="javascript:;">职位管理</a></li>
+            <li><a href="resumes.html">简历库</a></li>
+        </ul>
+    </div>
+</div>
+<!--nav1结束-->
+
+<div class="hairPost-content">
+    <div class="container">
+        <form action="">
+            <div class="hairPost-part1">
+                <h2><i>1</i>职位基本信息</h2>
+                <ul>
+                    <li>
+                        <i>*</i>
+                        <span>职位名称</span>
+                        <input class="postName" type="text"/>
+                    </li>
+                    <li class="addressLi">
+                        <i>*</i>
+                        <span>工作地址</span>
+                        <div class="city-box">
+                            <div class="city-con common-con">
+                                <input class="city" type="text" placeholder="北京"/>
+                                <i></i>
+                            </div>
+                            <div class="city-list common-list">
+                                <a href="javascript:;" data-value="北京">北京</a>
+                                <a href="javascript:;" data-value="上海">上海</a>
+                                <a href="javascript:;" data-value="广州">广州</a>
+                                <a href="javascript:;" data-value="深圳">深圳</a>
+                                <a href="javascript:;" data-value="杭州">杭州</a>
+                                <a href="javascript:;" data-value="成都">成都</a>
+                                <a href="javascript:;" data-value="西安">西安</a>
+                                <a href="javascript:;" data-value="南京">南京</a>
+                                <a href="javascript:;" data-value="厦门">厦门</a>
+                                <a href="javascript:;" data-value="武汉">武汉</a>
+                            </div>
+                        </div>
+                        <input class="address" type="text" placeholder="详填写街道、楼宇详细地址"/>
+                        <p>注：1、职位发布后省/市/区不可以修改。2、详填写街道、楼宇详细地址，有利于职位曝光。</p>
+                    </li>
+                    <li>
+                        <i>*</i>
+                        <span>职能分类</span>
+                        <div class="functionalType-box">
+                            <div class="functionalType-con common-con">
+                                <input class="functionalType" type="text"/>
+                                <i></i>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <i>*</i>
+                        <span>所属部门</span>
+                        <input class="department" type="text" placeholder="请输入该职位的所属部门"/>
+                    </li>
+                    <li>
+                        <i>*</i>
+                        <span>职位月薪</span>
+                        <div class="salary-box">
+                            <div class="salary-con common-con">
+                                <input class="salary" type="text"/>
+                                <i></i>
+                            </div>
+                            <div class="salary-list common-list">
+                                <a href="javascript:;" data-value="3k-5k">3k-5k</a>
+                                <a href="javascript:;" data-value="5k-10k">5k-8k</a>
+                                <a href="javascript:;" data-value="10k-15k">8k-15k</a>
+                                <a href="javascript:;" data-value="15k-20k">15k-20k</a>
+                                <a href="javascript:;" data-value="20k-25k">20k-25k</a>
+                                <a href="javascript:;" data-value="25k-30k">25k-30k</a>
+                                <a href="javascript:;" data-value="30k-35k">30k-35k</a>
+                                <a href="javascript:;" data-value="35k-40k">35k-40k</a>
+                                <a href="javascript:;" data-value="40k-45k">40k-45k</a>
+                                <a href="javascript:;" data-value="45k-50k">45k-50k</a>
+                                <a href="javascript:;" data-value="50k以上">50k以上</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <i>*</i>
+                        <span>发放月数</span>
+                        <input class="months" type="text"/>
+                        <span class="fs16">个月</span>
+                    </li>
+                    <li>
+                        <i class="vtop">*</i>
+                        <span class="vtop">职位描述</span>
+                        <textarea class="description" name="description" id=""></textarea>
+                    </li>
+                </ul>
+            </div>
+            <div class="hairPost-part2">
+                <h2><i>2</i>职位要求</h2>
+                <ul>
+                    <li>
+                        <span>工作年限</span>
+                        <input class="workYears" type="text"/>
+                        <span>年以上</span>
+                    </li>
+                    <li class="language-box">
+                        <span>语言要求</span>
+                        <label class="cur"><i></i><input name="require" type="checkbox" value="英语" checked="checked"/>英语</label>
+                        <label><i></i><input name="language" type="checkbox" value="日语"/>日语</label>
+                        <label><i></i><input name="language" type="checkbox" value="法语"/>法语</label>
+                        <label><i></i><input name="language" type="checkbox" value="普通话"/>普通话</label>
+                        <label><i></i><input name="language" type="checkbox" value="粤语"/>粤语</label>
+                        <label><i></i><input name="language" type="checkbox" value="其他"/>其他</label>
+                    </li>
+                    <li>
+                        <span>期望人选所在行业</span>
+                        <div class="industry-box">
+                            <div class="industry-con common-con">
+                                <input class="industry" type="text"/>
+                                <i></i>
+                            </div>
+                            <div class="industry-list common-list">
+                                <a href="javascript:;" data-value="银行">银行</a>
+                                <a href="javascript:;" data-value="保险">保险</a>
+                                <a href="javascript:;" data-value="基金/证券/期货/投资">基金/证券/期货/投资</a>
+                                <a href="javascript:;" data-value="会计/审计">会计/审计</a>
+                                <a href="javascript:;" data-value="信托/担保/拍卖/典当">信托/担保/拍卖/典当</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="clearfix">
+                        <div class="education-box">
+                            <span>学历要求</span>
+                            <input class="education" type="text"/>
+                        </div>
+                        <div class="unified-box">
+                            <span>是否全日制统招</span>
+                            <label class="cur"><i></i><input type="radio" name="unified" checked="checked" value="不限"/>不限</label>
+                            <label><i></i><input type="radio" name="unified" value="是"/>是</label>
+
+                        </div>
+                    </li>
+                    <li>
+                        <span>年龄要求</span>
+                        <input class="age" type="text"/>
+                    </li>
+                    <li class="sex-box">
+                        <span>性别要求</span>
+                        <label class="cur"><i></i><input type="radio" name="sex" value="不限" checked="checked"/>不限</label>
+                        <label><i></i><input type="radio" name="sex" value="男"/>男</label>
+                        <label><i></i><input type="radio" name="sex" value="女"/>女</label>
+                        <p>注：该条件不公开显示，但会根据您要求为您推荐或筛选简历</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="hairPost-part3">
+                <h2><i>3</i>其他信息</h2>
+                <ul>
+                    <li>
+                        <span>应聘简历发送至</span>
+                        <input class="email" type="text" placeholder="请输入邮箱地址"/>
+                    </li>
+                    <li class="auto-box">
+                        <span>是否自动回复应聘</span>
+                        <label class="cur"><i></i><input type="radio" value="是" name="auto" checked="checked"/>是</label>
+                        <label><i></i><input type="radio" value="否" name="auto"/>否</label>
+                        <p class="public">
+                            <label><i></i><input type="checkbox" name="public"/>发布为秘密职位(保密职位不会公开，仅对您的招聘服务顾问开放，招聘顾问会帮您推荐适合人群！）</label>
+                        </p>
+                    </li>
+                    <li>
+                        <i>*</i>
+                        <span>应聘反馈时长</span>
+                        <input class="workDays" type="text"/>
+                        <span>个工作日</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="hairPost-part4">
+                <a class="cur" href="javascript:;">发布职位</a>
+                <a href="javascript:;">保存为草稿职位</a>
+                <a href="javascript:;">保存为职位模板</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="functions-body">
+    <div class="functions-box">
+        <div class="functions-inner">
+            <ul>
+                <li>
+                    <span>银行</span>
+                    <div class="sub1 hide">
+                        <a href="javascript:;" data-value="行长/副行长">行长/副行长</a>
+                        <a href="javascript:;" data-value="客户总监">客户总监</a>
+                        <a href="javascript:;" data-value="客户经理/主管">客户经理/主管</a>
+                        <a href="javascript:;" data-value="客户代表">客户代表</a>
+                        <a href="javascript:;" data-value="综合业务经理/主管">综合业务经理/主管</a>
+                        <a href="javascript:;" data-value="综合业务专员/助理">综合业务专员/助理</a>
+                        <a href="javascript:;" data-value="公司业务部门经理/主管">公司业务部门经理/主管</a>
+                        <a href="javascript:;" data-value="公司业务客户经理">公司业务客户经理</a>
+                        <a href="javascript:;" data-value="个人业务部门经理/主管">个人业务部门经理/主管</a>
+                        <a href="javascript:;" data-value="个人业务客户经理">个人业务客户经理</a>
+                        <a href="javascript:;" data-value="银行经理/主任">银行经理/主任</a>
+                        <a href="javascript:;" data-value="大堂经理柜员/银行会计">大堂经理柜员/银行会计</a>
+                        <a href="javascript:;" data-value="信用卡中心">信用卡中心</a>
+                        <a href="javascript:;" data-value="银行卡/电子银行/新业务开拓">银行卡/电子银行/新业务开拓</a>
+                        <a href="javascript:;" data-value="国际结算/外汇交易">国际结算/外汇交易</a>
+                        <a href="javascript:;" data-value="进出口/信用证结算">进出口/信用证结算</a>
+                        <a href="javascript:;" data-value="信贷管理/资信评估/分析">信贷管理/资信评估/分析</a>
+                        <a href="javascript:;" data-value="风险控制">风险控制</a>
+                        <a href="javascript:;" data-value="信审核查">信审核查</a>
+                        <a href="javascript:;" data-value="清算人员">清算人员</a>
+                        <a href="javascript:;" data-value="资金管理">资金管理</a>
+                        <a href="javascript:;" data-value="资产管理">资产管理</a>
+                        <a href="javascript:;" data-value="行业研究基金托管">行业研究基金托管</a>
+                    </div>
+                </li>
+                <li>
+                    <span>保险</span>
+                    <div class="sub2 hide">
+                        <a href="javascript:;" data-value="保险代理人/经纪人/客户经理">保险代理人/经纪人/客户经理</a>
+                        <a href="javascript:;" data-value="保险顾问/财务规划师">保险顾问/财务规划师</a>
+                        <a href="javascript:;" data-value="业务经理/主管">业务经理/主管</a>
+                        <a href="javascript:;" data-value="客户服务/续期管理">客户服务/续期管理</a>
+                        <a href="javascript:;" data-value="稽核/法律/合规">稽核/法律/合规</a>
+                        <a href="javascript:;" data-value="核保/理赔">核保/理赔</a>
+                        <a href="javascript:;" data-value="契约管理">契约管理</a>
+                        <a href="javascript:;" data-value="保险精算师">保险精算师</a>
+                        <a href="javascript:;" data-value="产品开发/项目策划">产品开发/项目策划</a>
+                        <a href="javascript:;" data-value="保险培训师">保险培训师</a>
+                        <a href="javascript:;" data-value="保险内勤">保险内勤</a>
+                        <a href="javascript:;" data-value="储备经理">储备经理</a>
+                    </div>
+                </li>
+                <li>
+                    <span>基金/证券/期货/投资</span>
+                    <div class="sub3 hide">
+                        <a href="javascript:;" data-value="证券/外汇/期货经纪人">证券/外汇/期货经纪人</a>
+                        <a href="javascript:;" data-value="证券交易员">证券交易员</a>
+                        <a href="javascript:;" data-value="投资/理财顾问">投资/理财顾问</a>
+                        <a href="javascript:;" data-value="基金管理">基金管理</a>
+                        <a href="javascript:;" data-value="证券投资">证券投资</a>
+                        <a href="javascript:;" data-value="机构客户服务">机构客户服务</a>
+                        <a href="javascript:;" data-value="零售客户服务">零售客户服务</a>
+                        <a href="javascript:;" data-value="投资银行业务">投资银行业务</a>
+                        <a href="javascript:;" data-value="融资总监">融资总监</a>
+                        <a href="javascript:;" data-value="融资经理/主管">融资经理/主管</a>
+                        <a href="javascript:;" data-value="融资专员/助理">融资专员/助理</a>
+                        <a href="javascript:;" data-value="经纪业务">经纪业务</a>
+                        <a href="javascript:;" data-value="固定收益业务">固定收益业务</a>
+                        <a href="javascript:;" data-value="资产管理">资产管理</a>
+                        <a href="javascript:;" data-value="PE/VC投资">PE/VC投资</a>
+                    </div>
+                </li>
+                <li>
+                    <span>信托/担保/拍卖/典当</span>
+                    <div class="sub4 hide">
+                        <a href="javascript:;" data-value="信托业务">信托业务</a>
+                        <a href="javascript:;" data-value="房地产信托/物业投资">房地产信托/物业投资</a>
+                        <a href="javascript:;" data-value="担保业务">担保业务</a>
+                        <a href="javascript:;" data-value="拍卖师">拍卖师</a>
+                        <a href="javascript:;" data-value="典当业务">典当业务</a>
+                        <a href="javascript:;" data-value="珠宝/收藏品鉴定">珠宝/收藏品鉴定</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<!--footer开始-->
+<div class="footer" id="footer">
+    <div class="container">
+        <div class="attention">
+            <img src="../images/weixin.png" alt=""/>
+            <p>关注微信公众号</p>
+        </div>
+        <div class="contact">
+            <ul>
+                <li class="tel"><span></span>010—58690663</li>
+                <li class="email"><span></span>weihehuo@163.com</li>
+                <li class="address"><span></span>北京市朝阳区建外SOHO东区B座2703</li>
+                <li class="workday"><span></span>周一至周五 9:00——18:00</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--footer结束-->
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.nav-right ul li').hover(function(){
+            if($(this).find('ol').size()!==0){
+                $(this).find("ol").css({
+                    display:"block"
+                })
+            }
+        },function(){
+            if($(this).find("ol").size()!==0){
+                $(this).find("ol").css({
+                    display:"none"
+                })
+            }
+        })
+    });
+
+    $(function(){
+        $('.nav1 ul li').hover(function(){
+            $(this).addClass('cur').siblings().removeClass('cur');
+        })
+    })
+
+    $(function(){
+        $(".functionalType").click(function(){
+            $(".functions-body").css({
+                display:'block'
+            });
+            return false;
+        });
+        $('body').click(function(){
+            $('.functions-body').css({
+                display:'none'
+            })
+        })
+        $(".functions-inner div a").click(function(){
+            $(".functions-body").css({
+                display:'none'
+            });
+            $('.functionalType').val($(this).text())
+        })
+    });
+
+    $(function(){
+        selectBox(".city-con");
+        selectBox(".salary-con");
+        selectBox(".industry-con");
+        function selectBox(box){
+            $(box).find('input').focusin(function(){
+                $(box).next().show();
+            }).focusout(function(){
+                setTimeout(function(){
+                    $(box).next().hide();
+                },200)
+            });
+        }
+    });
+    $(function(){
+        selectItem(".city-box");
+        selectItem(".salary-box");
+        selectItem(".industry-box");
+        function selectItem(box){
+            $(box).find("a").click(function(){
+                $(this).parent().css("display","none");
+                $(box).find("input").val($(this).attr("data-value"))
+            })
+        }
+    });
+
+    $(function(){
+        $(".public label input").click(function(){
+            if($(this).attr('checked')=='checked'){
+                $(this).parent().removeClass("cur");
+                $(this).removeAttr("checked");
+            }else{
+                $(this).parent().addClass("cur");
+                $(this).attr('checked','checked');
+            }
+        });
+        $(".language-box label input").click(function(){
+            if($(this).attr('checked')=='checked'){
+                $(this).parent().removeClass("cur");
+                $(this).removeAttr("checked");
+            }else{
+                $(this).parent().addClass("cur");
+                $(this).attr('checked','checked');
+            }
+        });
+
+    });
+    $(function(){
+        singleSelect1(".sex-box");
+        singleSelect1(".unified-box");
+        singleSelect1(".auto-box");
+
+        function singleSelect1(box){
+            $(box).find('input[type="radio"]').click(function(){
+                $(this).attr('checked','checked').parent().siblings().find("input").removeAttr('checked');
+                $(this).parent().addClass('cur').siblings().removeClass('cur');
+            })
+        }
+    });
+
+    $(function(){
+        $(".functions-inner ul li span").hover(function(){
+            $(this).addClass('cur').parent().siblings().find('span').removeClass('cur');
+            $(this).next().removeClass('hide').parent().siblings().find('div').addClass('hide');
+        },function(){
+            $(this).find('div').addClass('hide');
+           // $(this).removeClass('cur');
+        })
+    });
+    $(function(){
+        function placeholderSupport() {    // 判断浏览器是否支持 placeholder
+            return 'placeholder' in document.createElement('input');
+        }
+        function checkEmpty(fill){
+            if($(fill).val()==""){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        if(!placeholderSupport()){
+            $(document).on('focus', '[placeholder]',function() {
+                var input = $(this);
+                if (input.val() == input.attr('placeholder')) {
+                    input.val('');
+                }
+            });
+            $(document).on('blur', '[placeholder]',function() {
+                var input = $(this);
+                if (input.val() == '' || input.val() == input.attr('placeholder')) {
+                    input.val(input.attr('placeholder'));
+                }
+            });
+            $('[placeholder]').blur();
+            /*IE浏览器对信息的完整性进行检查*/
+            $(".hairPost-part4 a").eq(0).click(function(){
+                if((checkEmpty(".postName"))&&(checkEmpty(".city"))&&(checkEmpty(".address")||$(".address").val()!=="详填写街道、楼宇详细地址")&&(checkEmpty(".functionalType"))&&(checkEmpty(".department")||$(".department").val()!=="请输入该职位的所属部门")&&(checkEmpty(".salary"))&&(checkEmpty(".months"))&&(checkEmpty(".description"))&&(checkEmpty(".workDays"))){
+                    //$(this).attr("href","information22.html");
+                }else{
+                    alert("请将必填信息填写完整！")
+                }
+            })
+
+        }else{
+            $(".hairPost-part4 a").eq(0).click(function(){
+                if((!checkEmpty(".postName"))&&(!checkEmpty(".city"))&&(!checkEmpty(".address"))&&(!checkEmpty(".functionalType"))&&(!checkEmpty(".department"))&&(!checkEmpty(".salary"))&&(!checkEmpty(".months"))&&(!checkEmpty(".description"))&&(!checkEmpty(".workDays"))){
+                    //$(this).attr("href","information22.html");
+                }else{
+                    alert("请将必填信息填写完整！")
+                }
+            })
+        }
+    });
+</script>
+</body>
+</html>

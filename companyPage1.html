@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title></title>
+    <link rel="stylesheet" href="css/common.css"/>
+    <link rel="stylesheet" href="css/common1.css"/>
+    <link rel="stylesheet" href="css/companyPage1.css"/>
+</head>
+<body>
+<!--nav开始-->
+<div class="nav">
+    <div class="container clearfix">
+        <div class="nav-left left">
+            <ul>
+                <li><a href="javascript:;">进入企业版</a>|</li>
+                <li><a href="index.html">返回首页</a></li>
+            </ul>
+        </div>
+        <div class="nav-right right">
+            <ul>
+                <li><a href="job/hairPost1.html">发职位</a>|</li>
+                <li class="cur"><a href="job/findResume.html">找简历</a>|</li>
+                <li><a href="javascript:;">职位管理</a>|</li>
+                <li><a href="javascript:;">简历管理</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--nav结束-->
+
+<div class="companyPage1-head">
+    <div class="container">
+        <ul>
+            <li class="cur"><a href="javascript:;">企业主页</a></li>
+            <li><a href="#floor1">职位基本信息</a></li>
+            <li><a href="#floor2">企业风采</a></li>
+            <li><a href="#floor3">企业咨讯</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="companyPage1-page1">
+    <div class="container">
+        <h2 id="floor1">职位基本信息</h2>
+        <ul>
+            <li>
+                <span>企业LOGO</span>
+                <input class="upload" type="text" value="上传"/>
+            </li>
+            <li class="companyName">
+                <span>企业名称</span>
+                <span class="companyName1">微合伙(北京)科技有限公司</span>
+                <input class="companyName2 hide" type="text"/>
+                <a href="javascript:;">修改</a>
+            </li>
+            <li>
+                <span><i>*</i>工作地址</span>
+                <div class="city-box common-box">
+                    <div class="city-con common-con">
+                        <input class="city" type="text" placeholder="北京"/>
+                        <i></i>
+                    </div>
+                    <div class="city-list common-list">
+                        <a href="javascript:;" data-value="北京">北京</a>
+                        <a href="javascript:;" data-value="上海">上海</a>
+                        <a href="javascript:;" data-value="深圳">深圳</a>
+                        <a href="javascript:;" data-value="广州">广州</a>
+                        <a href="javascript:;" data-value="天津">天津</a>
+                    </div>
+                </div>
+                <input class="address" type="text" placeholder="详填写街道、楼宇详细地址"/>
+                <p>注：1、职位发布后省/市/区不可以修改。2、详填写街道、楼宇详细地址，有利于职位曝光。</p>
+            </li>
+            <li>
+                <span><i>*</i>企业规模</span>
+                <div class="scale-box common-box">
+                    <div class="scale-con common-con">
+                        <input class="scale" type="text" placeholder="请选择"/>
+                        <i></i>
+                    </div>
+                    <div class="scale-list common-list">
+                        <a href="javascript:;" data-value="1-49人">1-49人</a>
+                        <a href="javascript:;" data-value="50-99人">50-99人</a>
+                        <a href="javascript:;" data-value="100-499人">100-499人</a>
+                        <a href="javascript:;" data-value="500-999人">500-999人</a>
+                        <a href="javascript:;" data-value="1000-2000人">1000-2000人</a>
+                        <a href="javascript:;" data-value="2000人以上">2000人以上</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <span><i>*</i>企业性质</span>
+                <div class="property-box common-box">
+                    <div class="property-con common-con">
+                        <input class="property" type="text" placeholder="请选择"/>
+                        <i></i>
+                    </div>
+                    <div class="property-list common-list">
+                        <a href="javascript:;" data-value="外商独资/外企办事处">外商独资/外企办事处</a>
+                        <a href="javascript:;" data-value="中外合营(合资/合作)">中外合营(合资/合作)</a>
+                        <a href="javascript:;" data-value="民营/民营企业">民营/民营企业</a>
+                        <a href="javascript:;" data-value="国有企业">国有企业</a>
+                        <a href="javascript:;" data-value="国内上市公司">国内上市公司</a>
+                        <a href="javascript:;" data-value="政府机关/非盈利机构">政府机关/非盈利机构</a>
+                        <a href="javascript:;" data-value="事业单位">事业单位</a>
+                        <a href="javascript:;" data-value="其他">其他</a>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <span><i>*</i>所属行业</span>
+                <div class="industry-box common-box">
+                    <div class="industry-con common-con">
+                        <input class="industry" type="text" placeholder="请选择"/>
+                        <i></i>
+                    </div>
+                    <div class="industry-list common-list">
+                        <a href="javascript:;" data-value="银行">银行</a>
+                        <a href="javascript:;" data-value="保险">保险</a>
+                        <a href="javascript:;" data-value="基金/证券/期货/投资">基金/证券/期货/投资</a>
+                        <a href="javascript:;" data-value="会计/审计">会计/审计</a>
+                        <a href="javascript:;" data-value="信托/担保/拍卖/典当">信托/担保/拍卖/典当</a>
+                    </div>
+                </div>
+            </li>
+            <li class="lightspot">
+                <span><i>*</i>企业亮点</span>
+                <p>添加企业亮点可以吸引求职者快速应聘职位</p>
+                <a href="javascript:;">立即添加企业亮点</a>
+            </li>
+            <li>
+                <span class="vtop"><i>*</i>企业介绍</span>
+                <textarea name="introduce" id="introduce" class="introduce"></textarea>
+            </li>
+            <li class="other">
+                <label><i></i><input checked="checked" type="checkbox" name="other"/>在企业主页显示其他分公司的主页链接</label>
+            </li>
+            <li class="btn">
+                <a href="javascript:;">保存信息</a>
+                <a href="javascript:;">预览主页</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="companyPage1-page2">
+    <div class="container">
+        <h2 id="floor2">企业风采</h2>
+        <div class="uploadImg-box">
+            <span>上传照片</span>
+            <input class="uploadImg" type="text"/>
+            <input class="browse" type="button" value="浏览"/>
+            <input class="upload" type="button" value="上传"/>
+        </div>
+        <p>GIF、JPG、PNG格式，大小不超过1M</p>
+    </div>
+</div>
+<div class="companyPage1-page3">
+    <div class="container">
+        <h2 id="floor3">企业咨讯</h2>
+        <textarea name="message" id="message" class="message"></textarea>
+        <div class="btn">
+            <a href="javascript:;">发布咨讯</a>
+            <a href="javascript:;">预览咨讯</a>
+        </div>
+    </div>
+</div>
+
+<div class="highlight-body">
+    <div class="highlight-box">
+        <div class="close"><img src="images/close.png" alt=""/></div>
+        <div class="keywords-box">
+            <input class="keywords" type="text" placeholder="请输入关键词"/>
+            <input class="add" type="button" value="添加"/>
+        </div>
+        <ul>
+            <li><a href="javascript:;" data-value="年底双薪">年底双薪</a></li>
+            <li><a href="javascript:;" data-value="股票期权">股票期权</a></li>
+            <li><a href="javascript:;" data-value="绩效奖金">绩效奖金</a></li>
+            <li><a href="javascript:;" data-value="带薪年假">带薪年假</a></li>
+            <li><a href="javascript:;" data-value="免费班车">免费班车</a></li>
+            <li><a href="javascript:;" data-value="定期体检">定期体检</a></li>
+            <li><a href="javascript:;" data-value="午餐补助">午餐补助</a></li>
+            <li><a href="javascript:;" data-value="交通补助">交通补助</a></li>
+        </ul>
+    </div>
+</div>
+
+<!--footer开始-->
+<div class="footer" id="footer">
+    <div class="container">
+        <div class="attention">
+            <img src="images/weixin.png" alt=""/>
+            <p>关注微信公众号</p>
+        </div>
+        <div class="contact">
+            <ul>
+                <li class="tel"><span></span>010—58690663</li>
+                <li class="email"><span></span>weihehuo@163.com</li>
+                <li class="address"><span></span>北京市朝阳区建外SOHO东区B座2703</li>
+                <li class="workday"><span></span>周一至周五 9:00——18:00</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--footer结束-->
+
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".companyName a").click(function(){
+            var val = $('.companyName1').text();
+            var val1 = $('.companyName2').val();
+            if($(this).text()=="修改"){
+                $(this).text("完成");
+                $('.companyName1').addClass('hide');
+                $('.companyName2').removeClass('hide').val(val);
+            }else if($(this).text() == "完成"){
+                $(this).text("修改");
+                $('.companyName2').addClass('hide');
+                $('.companyName1').removeClass('hide').text(val1);
+            }
+        })
+    });
+
+    $(function(){
+        var oUl = $('.highlight-box ul');
+        $('.highlight-box .close').click(function(){
+            if($('.lightspot p span').length<2){
+                alert("请选择两个以上的亮点");
+                return;
+            }
+            $('.highlight-body').css({
+                display:'none'
+            });
+        });
+
+        $('.highlight-box li a').click(function(){
+            var text1 = $(this).text();
+            if($(this).attr('class')=='cur'){
+                $(this).removeClass('cur');
+                $('.lightspot p span:contains('+text1+')').remove();
+            }else{
+                $(this).addClass('cur');
+                $('.lightspot p').append('<span>'+text1+'</span>');
+            }
+        });
+
+        $(".add").click(function(){
+            var keywords1 = $('.keywords').val();
+            if(keywords1.trim().length == 0||keywords1.length>5){
+                return;
+            }
+            if(!$('.highlight-box').is(":has(span)")){
+                $(".highlight-box").append("<ol><li><a href='javascript:;'>"+keywords1+"</a></li></ol>");
+            }else{
+                $(".highlight-box").append("<li><a href='javascript:;'>"+keywords1+"</a></li>");
+            }
+
+            //oUl.append('<li><a href="javascript:;" >'+keywords1+'</a></li>');
+            $('.highlight-box ol li a').click(function(){
+                var text1 = $(this).text();
+                if($(this).attr('class')=='cur'){
+                    $(this).removeClass('cur');
+                    $('.lightspot p span:contains('+text1+')').remove();
+                }else{
+                    $(this).addClass('cur');
+                    $('.lightspot p').append('<span>'+text1+'</span>');
+                }
+            });
+        });
+
+        $('.lightspot a').click(function(){
+            $(".highlight-body").css({
+                display:'block'
+            });
+            if(!$('.lightspot p').is(":has(span)")){
+                $('.lightspot p').text("");
+            }
+        });
+
+
+    });
+
+    $(function(){
+        selectBox(".city-con");
+        selectBox(".scale-con");
+        selectBox(".property-con");
+        selectBox(".industry-con");
+
+        function selectBox(box){
+            $(box).find('input').focusin(function(){
+                $(box).next().show();
+            }).focusout(function(){
+                setTimeout(function(){
+                    $(box).next().hide();
+                },200)
+            });
+        }
+    });
+    $(function(){
+        selectItem(".city-box");
+        selectItem(".scale-box");
+        selectItem(".property-box");
+        selectItem(".industry-box");
+        function selectItem(box){
+            $(box).find("a").click(function(){
+                $(this).parent().css("display","none");
+                $(box).find("input").val($(this).attr("data-value"))
+            })
+        }
+    });
+
+    $(function(){
+        function placeholderSupport() {    // 判断浏览器是否支持 placeholder
+            return 'placeholder' in document.createElement('input');
+        }
+        function checkEmpty(fill){
+            if($(fill).val()==""){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        if(!placeholderSupport()){
+            $(document).on('focus', '[placeholder]',function() {
+                var input = $(this);
+                if (input.val() == input.attr('placeholder')) {
+                    input.val('');
+                }
+            });
+            $(document).on('blur', '[placeholder]',function() {
+                var input = $(this);
+                if (input.val() == '' || input.val() == input.attr('placeholder')) {
+                    input.val(input.attr('placeholder'));
+                }
+            });
+            $('[placeholder]').blur();
+
+            /*IE浏览器对信息的完整性进行检查*/
+            $(".companyPage1-page1 .btn a").click(function(){
+                if((!checkEmpty(".city"))&&(checkEmpty(".address")||$(".address").val()!=="详填写街道、楼宇详细地址")&&(checkEmpty(".scale")||$(".scale").val()!=="请选择")&&(checkEmpty(".property")||$(".property").val()!=="请选择")&&(checkEmpty(".industry")||$(".industry").val()!=="请选择")){
+                    //$(this).attr("href","information22.html");
+                }else{
+                    alert("请将企业信息填写完整！")
+                }
+            })
+
+        }else{
+            $(".companyPage1-page1 .btn a").click(function(){
+                if((!checkEmpty(".city"))&&(!checkEmpty(".address"))&&(!checkEmpty(".industry"))&&(!checkEmpty(".property"))&&(!checkEmpty(".scale"))){
+                    //$(this).attr("href","information22.html");
+                }else{
+                    alert("请将企业信息填写完整！")
+                }
+            })
+        }
+    });
+
+    $(function(){
+        multiSelect(".other");
+
+        function multiSelect(box){
+            $(box).find('input').click(function(){
+                if($(this).attr('checked')=='checked'){
+                    $(this).parent().removeClass("cur");
+                    $(this).removeAttr("checked");
+                }else{
+                    $(this).parent().addClass("cur");
+                    $(this).attr('checked','checked');
+                }
+            });
+        }
+    });
+</script>
+</body>
+</html>

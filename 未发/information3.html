@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/information.css"/>
+    <style type="text/css">
+        .box ul li input.schoolName,.box ul li input.major,.box ul li input.eduExp{
+            width: 350px;
+            height: 40px;
+            line-height: 40px;
+            padding-left: 10px;
+            border-radius: 5px;
+        }
+        .box ul li .highEdu-box,.box ul li .graduation-box{
+            width: 160px;
+            height: 40px;
+            display: inline-block;
+            margin-right: 35px;
+            position: relative;
+            *float:left;
+            *margin-right:40px;
+        }
+        .box ul li .highEdu-list,.box ul li .graduation-list{
+            display: none;
+            width: 158px;
+            height: 125px;
+            overflow: auto;
+            border: 1px solid #ccc;
+            background-color: #fff;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            z-index: 3;
+        }
+        .box ul li .highEdu-list a,.box ul li .graduation-list a{
+            display: block;
+            padding-left: 10px;
+            line-height: 25px;
+        }
+        .box ul li .highEdu-list a:hover,.box ul li .graduation-list a:hover{
+            color: #e60012;
+        }
+        .box ul li .edu-exp-con{
+            position: relative;
+        }
+        .box ul li input.highEdu,.box ul li input.graduation{
+            width: 130px;
+            height: 40px;
+            line-height: 40px;
+            padding: 0 20px 0 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .box ul li .highEdu-con i,.box ul li .graduation-con i{
+            cursor: pointer;
+            width: 0;
+            height: 0;
+            border-width: 8px;
+            border-color: #d3d3d3 transparent transparent transparent;
+            border-style: solid;
+            position: absolute;
+            right: 20px;
+            top: 16px;
+        }
+        .box ul li .graduation-box{
+            margin-right: 0;
+        }
+
+        .box .edu-exp-box,.box .edu-exp-con{
+            position: relative;
+        }
+        .box .edu-exp-box .edu-exp-con span{
+            display: inline-block;
+            width: 19px;
+            height: 19px;
+            background: url("../images/info-more.png") no-repeat;
+            position: absolute;
+            right: 20px;
+            top: 10px;
+        }
+
+
+        .box ul li.show{
+            display: none;
+        }
+        .box ul li.line{
+            height: 0;
+            width: 100%;
+            border-bottom: 1px dashed #ccc;
+        }
+        .box ul li.last{
+            margin-top: 40px;
+        }
+        .box ul li a.prev{
+            float: left;
+            color: #000;
+            padding: 5px 10px;
+        }
+        .box ul li a.next{
+            float: right;
+            color: #e60012;
+            padding: 5px 10px;
+        }
+        .box ul li a.next:hover,.box ul li a.prev:hover{
+            color: #fff;
+            background-color: #e60012;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <h3>教育经历</h3>
+    <form action="">
+        <ul>
+            <li><input class="schoolName" type="text" name="school" title="学校名称" placeholder="学校名称"/></li>
+            <li>
+                <div class="highEdu-box">
+                    <div class="highEdu-con">
+                        <input class="highEdu" id="highEdu" type="text" title="最高学历" placeholder="最高学历"/>
+                        <i></i>
+                    </div>
+                    <div class="highEdu-list">
+                        <a href="javascript:;" data-value="大专">大专</a>
+                        <a href="javascript:;" data-value="本科">本科</a>
+                        <a href="javascript:;" data-value="硕士">硕士</a>
+                        <a href="javascript:;" data-value="博士">博士</a>
+                        <a href="javascript:;" data-value="其他">其他</a>
+                    </div>
+                </div>
+                <div class="graduation-box">
+                    <div class="graduation-con">
+                        <input class="graduation" id="graduation" type="text" title="毕业年份" placeholder="毕业年份"/>
+                        <i></i>
+                    </div>
+                    <div class="graduation-list">
+                        <a href="javascript:;" data-value="2016">2016</a>
+                        <a href="javascript:;" data-value="2015">2015</a>
+                        <a href="javascript:;" data-value="2014">2014</a>
+                        <a href="javascript:;" data-value="2013">2013</a>
+                        <a href="javascript:;" data-value="2012">2012</a>
+                        <a href="javascript:;" data-value="2011">2011</a>
+                        <a href="javascript:;" data-value="2010">2010</a>
+                        <a href="javascript:;" data-value="2009">2009</a>
+                        <a href="javascript:;" data-value="2008">2008</a>
+                        <a href="javascript:;" data-value="2007">2007</a>
+                        <a href="javascript:;" data-value="2006">2006</a>
+                        <a href="javascript:;" data-value="2005">2005</a>
+                        <a href="javascript:;" data-value="2004">2004</a>
+                        <a href="javascript:;" data-value="2003">2003</a>
+                        <a href="javascript:;" data-value="2002">2002</a>
+                        <a href="javascript:;" data-value="2001">2001</a>
+                        <a href="javascript:;" data-value="2000">2000</a>
+                    </div>
+                </div>
+            </li>
+            <li><input class="major" type="text" name="major" title="所学专业" placeholder="所学专业"/></li>
+
+            <li class="line show"></li>
+            <li class="show"><input class="schoolName" type="text" name="school" title="学校名称" placeholder="学校名称"/></li>
+            <li class="show">
+                <div class="highEdu-box">
+                    <div class="highEdu-con">
+                        <input class="highEdu" type="text" title="最高学历" placeholder="最高学历"/>
+                        <i></i>
+                    </div>
+                    <div class="highEdu-list">
+                        <a href="javascript:;" data-value="大专">大专</a>
+                        <a href="javascript:;" data-value="本科">本科</a>
+                        <a href="javascript:;" data-value="硕士">硕士</a>
+                        <a href="javascript:;" data-value="博士">博士</a>
+                        <a href="javascript:;" data-value="其他">其他</a>
+                    </div>
+                </div>
+                <div class="graduation-box">
+                    <div class="graduation-con">
+                        <input class="graduation" type="text" title="毕业年份" placeholder="毕业年份"/>
+                        <i></i>
+                    </div>
+                    <div class="graduation-list">
+                        <a href="javascript:;" data-value="2016">2016</a>
+                        <a href="javascript:;" data-value="2015">2015</a>
+                        <a href="javascript:;" data-value="2014">2014</a>
+                        <a href="javascript:;" data-value="2013">2013</a>
+                        <a href="javascript:;" data-value="2012">2012</a>
+                        <a href="javascript:;" data-value="2011">2011</a>
+                        <a href="javascript:;" data-value="2010">2010</a>
+                        <a href="javascript:;" data-value="2009">2009</a>
+                        <a href="javascript:;" data-value="2008">2008</a>
+                        <a href="javascript:;" data-value="2007">2007</a>
+                        <a href="javascript:;" data-value="2006">2006</a>
+                        <a href="javascript:;" data-value="2005">2005</a>
+                        <a href="javascript:;" data-value="2004">2004</a>
+                        <a href="javascript:;" data-value="2003">2003</a>
+                        <a href="javascript:;" data-value="2002">2002</a>
+                        <a href="javascript:;" data-value="2001">2001</a>
+                        <a href="javascript:;" data-value="2000">2000</a>
+                    </div>
+                </div>
+            </li>
+            <li class="show"><input class="major" type="text" name="major" title="所学专业" placeholder="所学专业"/></li>
+            <li>
+                <div class="edu-exp-box">
+                    <div class="edu-exp-con">
+                        <input class="eduExp" id="eduExp" type="text" title="添加更多教育经历" placeholder="添加更多教育经历"/>
+                        <span></span>
+                    </div>
+                </div>
+            </li>
+            <li class="last"><a class="prev" href="information2.html">上一步</a><a class="next" href="#">最后一步：一句话介绍</a></li>
+        </ul>
+    </form>
+</div>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/jquery.mkinfinite.js"></script>
+<script type="text/javascript">
+
+    $(document).ready(function(){
+         $('body').mkinfinite({
+         maxZoom:       1.4,
+         animationTime: 4000,
+         imagesRatio:   (960 / 720),
+         isFixedBG:     true,
+         zoomIn:        true,
+         imagesList:    new Array('images/register-bg.jpg')
+         });
+     });
+
+    $(function(){
+        function placeholderSupport() {    // 判断浏览器是否支持 placeholder
+            return 'placeholder' in document.createElement('input');
+        }
+        function checkEmpty(fill){
+            if($(fill).val()==""){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+        if(!placeholderSupport()){
+            $(document).on('focus', '[placeholder]',function() {
+                var input = $(this);
+                if (input.val() == input.attr('placeholder')) {
+                    input.val('');
+                }
+            });
+            $(document).on('blur', '[placeholder]',function() {
+                var input = $(this);
+                if (input.val() == '' || input.val() == input.attr('placeholder')) {
+                    input.val(input.attr('placeholder'));
+                }
+            });
+            $('[placeholder]').blur();
+
+            $("a.next").click(function(){
+                if((checkEmpty(".schoolName")||$(".schoolName").val()!=="学校名称")&&(checkEmpty(".highEdu")||$(".highEdu").val()!=="最高学历")&&(checkEmpty(".graduation")||$(".graduation").val()!=="毕业年份")&&(checkEmpty(".major")||$(".major").val()!=="所学专业")){
+                    $(this).attr("href","information4.html");
+                }else{
+                    alert("请将您的教育经历填写完整！")
+                }
+            })
+        }else{
+            $("a.next").click(function(){
+                if((!checkEmpty(".schoolName"))&&(!checkEmpty(".highEdu"))&&(!checkEmpty(".graduation"))&&(!checkEmpty(".major"))){
+                    $(this).attr("href","information4.html");
+                }else{
+                    alert("请将您的教育经历填写完整！")
+                }
+            })
+        }
+    });
+
+    $(function(){
+        $(".edu-exp-con").click(function(){
+            $(".box").css({
+                marginTop:-320
+            }).animate({
+                height:"520"
+            },500);
+            $(".show").css({
+                display:"block"
+            });
+        })
+    })
+    $(function(){
+        selectBox(".highEdu-con");
+        selectBox(".graduation-con");
+
+        function selectBox(box){
+            $(box).find('input').focusin(function(){
+                $(box).next().show();
+            }).focusout(function(){
+                setTimeout(function(){
+                    $(box).next().hide();
+                },200)
+            });
+        }
+    })
+
+    $(function(){
+        selectItem(".highEdu-box");
+        selectItem(".graduation-box");
+
+        function selectItem(box){
+            var val1;
+            $(box).find("a").click(function(){
+                val1 = $(this).attr("data-value");
+                $(box).find("input").val(val1);
+                $(this).parent().css("display","none");
+            });
+        }
+    })
+
+    $(function(){
+
+        $(".schoolName").blur(function(){
+            if($(this).val()==""){
+                $(this).parent().find("span").html("");
+                $(this).parent().append("<span style='color: #f00;'>请填写您的学校名称</span>")
+            }else{
+                $(this).parent().find("span").html("");
+            }
+        });
+        $(".position").blur(function(){
+            var name = $(this).val();
+            if(name==""){
+                $(this).parent().find("span").html("");
+                $(this).parent().append("<span style='color: #f00;'>请输入您所学的专业</span>")
+            }else{
+                $(this).parent().find("span").html("");
+            }
+        })
+    })
+</script>
+</body>
+</html>

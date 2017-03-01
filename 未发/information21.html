@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/information.css"/>
+
+    <style type="text/css">
+        .box{
+            height: 360px;
+        }
+        .box ul li input.companyName{
+            width: 340px;
+            height: 40px;
+            line-height: 40px;
+            padding: 0 10px;
+            border-radius: 5px;
+        }
+        .box ul li .city-box,.box ul li .industry-box{
+            width: 160px;
+            height: 40px;
+            display: inline-block;
+            margin-right: 35px;
+            position: relative;
+            *float:left;
+            *margin-right:40px;
+        }
+        .box ul li .city-list,.box ul li .industry-list{
+            display: none;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            z-index: 2;
+            width: 158px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+        }
+        .box ul li .city-list a,.box ul li .industry-list a{
+            display: block;
+            line-height: 25px;
+            padding-left: 10px;
+        }
+        .box ul li .city-list a:hover,.box ul li .industry-list a:hover{
+            color: #e60012;
+        }
+        .box ul li .city-box,.box ul li .city-con{
+            position: relative;
+        }
+        .box ul li input.city,.box ul li input.industry{
+            width: 130px;
+            height: 40px;
+            line-height: 40px;
+            padding: 0 20px 0 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .box ul li .city-con i,.box ul li .industry-con i{
+            cursor: pointer;
+            width: 0;
+            height: 0;
+            border-width: 8px;
+            border-color: #d3d3d3 transparent transparent transparent;
+            border-style: solid;
+            position: absolute;
+            right: 20px;
+            top: 16px;
+        }
+        .box ul li .industry-box{
+            margin-right: 0;
+        }
+
+        .box ul li input.linkman,.box ul li input.phone,.box ul li input.code{
+            width: 195px;
+            height: 40px;
+            line-height: 40px;
+            padding: 0 10px;
+            border-radius: 5px;
+        }
+        .box ul li .woman,.box ul li .man{
+            font-size: 12px;
+        }
+        .box ul li .woman{
+            margin: 0 15px 0 8px;
+        }
+        .box ul li .man{
+            margin-right: 10px;
+        }
+        .box ul li .woman input,.box ul li .man input{
+            display: none;
+        }
+        .box ul li .woman i,.box ul li .man i{
+            width: 14px;
+            height: 14px;
+            display: inline-block;
+            margin-right: 5px;
+            background: url("../images/info2-icon1.png") no-repeat;
+            background-position: 0 0;
+            vertical-align: text-bottom;
+        }
+        .box ul li .cur i{
+            background-position: 0 -16px;
+        }
+
+        .box ul li a.sendCode{
+            display: inline-block;
+            width: 115px;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            margin-left: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #e60012;
+            border-radius: 5px;
+        }
+
+        .box ul li.next{
+            margin-top: 40px;
+            text-align: center;
+        }
+        .box ul li.next a{
+            color: #e60012;
+            padding: 5px 10px;
+        }
+        .box ul li.next a:hover{
+            color: #fff;
+            background-color: #e60012;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <h3>企业信息</h3>
+    <form action="">
+        <ul>
+            <li><input class="companyName" type="text" name="companyName" title="请输入公司名称" placeholder="公司名称"/></li>
+            <li class="clearfix">
+                <!--所在地开始-->
+                <div class="city-box">
+                    <div class="city-con">
+                        <input class="city" id="city" type="text" title="所在地" placeholder="所在地"/>
+                        <i></i>
+                    </div>
+                    <div class="city-list">
+                        <a href="javascript:;" data-value="北京">北京</a>
+                        <a href="javascript:;" data-value="上海">上海</a>
+                        <a href="javascript:;" data-value="广州">广州</a>
+                        <a href="javascript:;" data-value="深圳">深圳</a>
+                        <a href="javascript:;" data-value="天津">天津</a>
+                        <a href="javascript:;" data-value="苏州">苏州</a>
+                        <a href="javascript:;" data-value="重庆">重庆</a>
+                        <a href="javascript:;" data-value="南京">南京</a>
+                        <a href="javascript:;" data-value="杭州">杭州</a>
+                        <a href="javascript:;" data-value="大连">大连</a>
+                        <a href="javascript:;" data-value="成都">成都</a>
+                        <a href="javascript:;" data-value="武汉">武汉</a>
+                    </div>
+                </div>
+                <!--所在地结束-->
+                <!--所属行业开始-->
+                <div class="industry-box">
+                    <div class="industry-con">
+                        <input class="industry" id="industry" title="所属行业" type="text" placeholder="所属行业"/>
+                        <i></i>
+                    </div>
+                    <div class="industry-list">
+                        <a href="javascript:;" data-value="银行">银行</a>
+                        <a href="javascript:;" data-value="保险">保险</a>
+                        <a href="javascript:;" data-value="会计/审计">会计/审计</a>
+                        <a href="javascript:;" data-value="基金/证券/期货/投资">基金/证券/期货/投资</a>
+                        <a href="javascript:;" data-value="信托/担保/拍卖/典当">信托/担保/拍卖/典当</a>
+                    </div>
+                </div>
+                <!--所属行业结束-->
+            </li>
+            <!--联系人开始-->
+            <li class="linkman-box">
+                <input class="linkman" type="text" name="linkman" title="请输入联系人的姓名" placeholder="联系人"/>
+                <label class="woman cur"><i></i><input checked="checked" type="radio" name="sex" value="女士" />女士</label>
+                <label class="man"><i></i><input type="radio" name="sex" value="先生" />先生</label>
+            </li>
+            <!--联系人结束-->
+                <!--手机号码开始-->
+            <li>
+                <input class="phone" type="text" name="phone" title="手机号码" placeholder="手机号码"/>
+                <a class="sendCode" href="javascript:;">发送验证码</a>
+            </li>
+                <!--手机号码结束-->
+            <li><input class="code" type="text" name="code" title="请输入短信提示的验证码" placeholder="请输入短信提示的验证码"/></li>
+            <li class="next"><a href="#">下一步</a></li>
+        </ul>
+    </form>
+</div>
+<script src="../js/jquery-1.10.2.min.js"></script>
+<script src="../js/jquery.mkinfinite.js"></script>
+<script type="text/javascript">
+    /*使背景图片运动*/
+    $(document).ready(function(){
+        $('body').mkinfinite({
+            maxZoom:       1.4,
+            animationTime: 4000,
+            imagesRatio:   (960 / 720),
+            isFixedBG:     true,
+            zoomIn:        true,
+            imagesList:    new Array('images/register-bg.jpg')
+        });
+    });
+
+    $(function(){
+        var oInput = $('.linkman-box label input');
+        oInput.click(function(){
+            $(this).parent().addClass('cur').siblings().removeClass('cur');
+            $(this).attr('checked','checked').parent().siblings().find('input').removeAttr('checked');
+        })
+    });
+
+    $(function(){
+        function placeholderSupport() {    // 判断浏览器是否支持 placeholder
+            return 'placeholder' in document.createElement('input');
+        }
+
+        function checkEmpty(fill){
+            if($(fill).val()==""){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        if(!placeholderSupport()){
+            $(document).on('focus', '[placeholder]',function() {
+                var input = $(this);
+                if (input.val() == input.attr('placeholder')) {
+                    input.val('');
+                }
+            });
+            $(document).on('blur', '[placeholder]',function() {
+                var input = $(this);
+                if (input.val() == '' || input.val() == input.attr('placeholder')) {
+                    input.val(input.attr('placeholder'));
+                }
+            });
+            $('[placeholder]').blur();
+
+            /*IE浏览器对信息的完整性进行检查*/
+            $(".next a").click(function(){
+                if((checkEmpty(".companyName")||$(".companyName").val()!=="公司名称")&&(checkEmpty(".city")||$(".city").val()!=="所在地")&&(checkEmpty(".industry")||$(".industry").val()!=="所属行业")&&(checkEmpty(".linkman")||$(".linkman").val()!=="联系人")&&(checkEmpty(".phone")||$(".phone").val()!=="手机号码")){
+                    $(this).attr("href","information22.html");
+                }else{
+                    alert("请将企业信息填写完整！")
+                }
+            })
+
+        }else{
+            $(".next a").click(function(){
+                if((!checkEmpty(".companyName"))&&(!checkEmpty(".city"))&&(!checkEmpty(".industry"))&&(!checkEmpty(".linkman"))&&(!checkEmpty(".phone"))){
+                    $(this).attr("href","information22.html");
+                }else{
+                    alert("请将企业信息填写完整！")
+                }
+            })
+        }
+    });
+
+    $(function(){
+        selectBox(".city-con");
+        selectBox(".industry-con");
+        function selectBox(box){
+            $(box).find('input').focusin(function(){
+                $(box).next().show();
+            }).focusout(function(){
+                setTimeout(function(){
+                    $(box).next().hide();
+                },200)
+            });
+        }
+    })
+    $(function(){
+        selectItem(".city-box");
+        selectItem(".industry-box");
+        function selectItem(box){
+            $(box).find("a").click(function(){
+                $(this).parent().css("display","none");
+                $(box).find("input").val($(this).attr("data-value"))
+            })
+        }
+    })
+    $(function(){
+        $(".phone").blur(function(){
+            var myreg = /^(((13[0-9]{1})|(14[0-9]{1})|(17[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+            if($(this).val()==""){
+                $(this).parent().find("span").html("");
+                $(this).parent().append("<span style='color: #f00;'>手机号码不能为空</span>");
+            }else if($(this).val().length!=11){
+                $(this).parent().find("span").html("");
+                $(this).parent().append("<span style='color: #f00;'>请核对您的手机号是否正确</span>");
+            }else if(!myreg.test($(this).val())){
+                $(this).parent().find("span").html("");
+                $(this).parent().append("<span style='color: #f00;'>请输入有效的手机号码</span>");
+            }else{
+                $(this).parent().find("span").html("");
+            }
+        });
+        $(".companyName").blur(function(){
+            var myreg1 = /^[\u4e00-\u9fa5]{2,20}$/;
+            var name = $(this).val();
+            if(name==""){
+                $(this).parent().find("span").html("");
+                $(this).parent().append("<span style='color: #f00;'>请输入您的公司名称</span>")
+            }else if(name.length<2||name.length>20){
+                $(this).parent().find("span").html("");
+                $(this).parent().append("<span style='color: #f00;'>请检查公司名称是否输入正确</span>")
+            }else{
+                $(this).parent().find("span").html("");
+            }
+        })
+        $(".linkman").blur(function(){
+            var myreg2 = /^[\u4e00-\u9fa5]{2,4}$/;
+            var name = $(this).val();
+            if(name==""){
+                $(this).parent().find("span").html("");
+                $(this).parent().append("<span style='color: #f00;'>请输入联系人的姓名</span>")
+            }else if(name.length<2||name.length>4){
+                $(this).parent().find("span").html("");
+                $(this).parent().append("<span style='color: #f00;'>请检查联系人姓名是否输入正确</span>")
+            }else if(!myreg2.test(name)){
+                $(this).parent().find("span").html("");
+                $(this).parent().append("<span style='color: #f00;'>姓名应为中文</span>")
+            }else{
+                $(this).parent().find("span").html("");
+            }
+        })
+
+    })
+</script>
+</body>
+</html>

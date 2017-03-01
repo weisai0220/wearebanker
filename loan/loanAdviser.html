@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>微合伙文化传媒有限公司_微合伙科技有限公司_金融社交圈_金融趴官网_微合伙</title>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/loanAdviser.css"/>
+</head>
+<body>
+<!--header 开始-->
+<div class="header">
+    <div class="container clearfix">
+        <div class="head-left left">
+            <div class="head-logo">
+                <a href="../index.html"><img src="../images/logo.png" alt=""/></a>
+            </div>
+            <ul>
+                <li><a href="../financeProducts.html">智能投顾</a></li>
+                <li><a href="personalLoan.html">智能信贷</a></li>
+                <li><a href="../financePage.html">项目融资</a></li>
+                <li><a href="../dating/datingIndex.html">相亲交友</a></li>
+                <li>
+                    <a href="javascript:;">求职招聘</a>
+                    <ol>
+                        <li><a href="../job/personal1.html">个人中心</a></li>
+                        <li><a href="../job/resumes.html">简历库</a></li>
+                        <li><a href="../job/personal1.html#floor6">求职意向</a></li>
+                        <li><a href="../job/recruitment1.html">高端招聘</a></li>
+                        <li><a href="../job/jobGuidance1.html">求职指导</a></li>
+                    </ol>
+                </li>
+                <li><a href="../news/news.html">咨讯</a></li>
+                <li>
+                    <a href="javascript:;">关于我们</a>
+                    <ol>
+                        <li><a href="../about/aboutUs.html">公司简介</a></li>
+                        <li><a href="../about/contactUs.html">联系我们</a></li>
+                        <li><a href="../about/adService.html">主营业务</a></li>
+                        <li><a href="../about/joinUs.html">加入我们</a></li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+        <div class="head-right right">
+            <ol>
+                <li class="login"><a href="../login1.html"><i></i>登录</a></li>
+                <li class="register"><a href="../login1.html"><i></i>注册</a></li>
+            </ol>
+        </div>
+    </div>
+</div>
+<!--header结束-->
+
+<div class="part1">
+    <div class="container clearfix">
+        <div class="part1-left">
+            <h3>宜信 - 宜人贷</h3>
+            <p>无需抵押</p>
+            <p>额度范围：<span>3万——50万</span></p>
+            <p>贷款期限：<span>12月——36月</span></p>
+            <p>产品介绍：<span>秒货秒批</span></p>
+            <a href="msgConsulting1.html">留言咨询</a>
+        </div>
+        <div class="part1-right">
+            <div class="part1-right-top clearfix">
+                <img src="../images/loanAdviser-part1-icon.png" alt=""/>
+                <p>办理人：<span>韩经理</span></p>
+            </div>
+            <p class="star">服务质量：<i></i><i></i><i></i><i></i></p>
+            <p>服务区域：<span>北京</span></p>
+        </div>
+    </div>
+</div>
+<div class="part2">
+    <div class="container">
+        <ul class="clearfix">
+            <li class="ml10 cur"><a href="javascript:;">贷款须知</a></li>
+        </ul>
+        <div class="box1">
+            <p>产品特点只需身份证，网查征信</p>
+            <p>申请条件有工作非白户</p>
+            <p>申请要求：要求在前海微众借过款并且上征信了</p>
+            <p>信用要求：半年内不能有连三磊六</p>
+            <p>负债要求：不能过高</p>
+            <p>其他：</p>
+            <p>所需材料身份证，网查征信</p>
+            <p>利率说明：1.68-2.18</p>
+        </div>
+        <ul class="clearfix">
+            <li class="ml10 cur"><a href="javascript:;">留言互动</a></li>
+        </ul>
+        <div class="box2">
+            <div class="msg-box">
+                <h3>暂无人留言……</h3>
+               <!-- <p><span>xx:</span>xxxxxx</p>-->
+            </div>
+            <div class="write clearfix">
+                <h2>我要留言</h2>
+                <textarea name="content" id="content">内容：</textarea>
+                <input type="button" class="submit" value="发布"/>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--footer开始-->
+<div class="footer" id="footer">
+    <div class="container">
+        <div class="attention">
+            <img src="../images/weixin.png" alt=""/>
+            <p>关注微信公众号</p>
+        </div>
+        <div class="contact">
+            <ul>
+                <li class="tel"><span></span>010—58690663</li>
+                <li class="email"><span></span>weihehuo@163.com</li>
+                <li class="address"><span></span>北京市朝阳区建外SOHO东区B座2703</li>
+                <li class="workday"><span></span>周一至周五 9:00——18:00</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--footer结束-->
+
+<script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".head-left ul li").hover(function(){
+            if($(this).find("ol").size()!==0){
+                $(this).find("ol").css({
+                    display:"block"
+                })
+            }else{
+                $(this).addClass("active").siblings().removeClass("active");
+            }
+        },function(){
+            if($(this).find("ol").size()!==0){
+                $(this).find("ol").css({
+                    display:"none"
+                })
+            }else{
+                $(this).removeClass("active");
+            }
+        })
+    });
+
+    $(function(){
+
+        $(".write textarea").focusin(function(){
+            if($(this).val() == "内容："){
+                $(this).val("").css("color","#000")
+            }
+        }).blur(function(){
+            if($(this).val() == ""){
+                $(this).val("内容：").css("color","#ccc")
+            }
+        });
+
+        /*查看是否有留言,有留言就隐藏h3标签，没有留言就显示h3标签*/
+        var oMsg = $('.msg-box'),oMsgP = oMsg.find("p");
+        if(oMsgP.length !== 0){
+            oMsg.find("h3").addClass("hide");
+            oMsgP.removeClass('hide');
+        }else{
+            oMsg.find("h3").removeClass("hide");
+            oMsgP.addClass('hide');
+        }
+
+        $(".submit").click(function(){
+            if(oMsg.find("h3").is(":visible")){
+                oMsg.find("h3").addClass("hide");
+            }
+            var oText = $(".write textarea");
+            var val = oText.val().trim();
+            if(val == '' || val == '内容：'){
+                return;
+            }
+            var str = "<p><span>用户名：</span>"+val+"</p>"
+            oMsg.append(str);
+            oText.val("内容：").css("color","#ccc");
+        });
+
+    });
+</script>
+</body>
+</html>

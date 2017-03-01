@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>微合伙文化传媒有限公司_微合伙科技有限公司_金融社交圈_金融趴官网_微合伙</title>
+    <link rel="stylesheet" href="../css/common.css"/>
+    <link rel="stylesheet" href="../css/findPass.css"/>
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <span>
+            <a href="../index.html">
+                <img src="../images/logo.png" alt=""/>
+            </a>
+        </span>
+        <h3>找回密码</h3>
+    </div>
+</div>
+<div class="part1">
+    <div class="container">
+        <div class="part1-top clearfix">
+            <dl>
+                <dt>输入手机号</dt>
+                <dd><i></i></dd>
+            </dl>
+            <dl>
+                <dt>验证手机号</dt>
+                <dd><i></i></dd>
+            </dl>
+            <dl class="cur">
+                <dt>重置密码</dt>
+                <dd><i></i></dd>
+            </dl>
+            <dl>
+                <dt>重置密码成功</dt>
+                <dd><i></i></dd>
+            </dl>
+        </div>
+
+        <div class="part3-con">
+            <form action="">
+                <p class="phoneNum">您输入的手机号为 <span>158******08</span></p>
+                <p class="pass1">
+                    <i>*</i><span>新密码</span>
+                    <input type="password" name="pass1"/>
+                    <label></label>
+                </p>
+                <p class="tip">区分大小写，6-20位，必须包含数字，字母</p>
+                <p class="pass2">
+                    <i>*</i><span>确认密码</span>
+                    <input type="password" name="pass2"/>
+                    <label></label>
+                </p>
+                <p class="finish">
+                    <a href="javascript:;" class="finish-btn">完成</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        var reg = /^[0-9a-zA-Z]{6,20}$/;
+        var pass1 = "";
+        var pass2 = "";
+        var passInp1 = $(".pass1 input");
+        var passInp2 = $(".pass2 input");
+
+        $(".finish-btn").click(function(){
+            pass1 = passInp1.val();
+            pass2 = passInp2.val();
+            if(pass1 == ""){
+                passInp1.next().text("新密码不能为空！");
+                passInp2.next().text("");
+            }else if(pass2 == ""){
+                passInp1.next().text("");
+                passInp2.next().text("确认密码不能为空！");
+            }else if(!reg.test(pass1)){
+                passInp1.next().text("必须包含数字，字母！");
+                passInp2.next().text("");
+            }else if(pass1 !== pass2){
+                passInp1.next().text("");
+                passInp2.next().text("密码不一致！请重新输入！")
+            }else{
+                passInp1.next().text("");
+                passInp2.next().text("");
+                $(this).attr("href","findPass4.html");
+            }
+
+        });
+
+    });
+</script>
+</body>
+</html>
